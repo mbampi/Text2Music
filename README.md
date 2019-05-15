@@ -1,2 +1,2 @@
 # Text2Music
-Java and JFurgue
+Java and JFugue
