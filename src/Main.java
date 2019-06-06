@@ -7,22 +7,26 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         System.out.println("Java Text2Music!");
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Texto Musical: ");
-        String  musicalText = scan.nextLine();
-        System.out.println(musicalText);
-        Pattern patternText = new Pattern(musicalText);
+        String textoMusical = scan.nextLine();
 
-        Player player = new Player();
-        Pattern pattern = new Pattern("X[Volume]=10000 C D E F G R A B I[Acoustic_Bass] " +
-                                            "I[Acoustic_Bass] X[Volume]=0 C D E F G A B I " +
-                                            "X[Volume]=5200 I[Guitar] C D E F G A B");
-        //Pattern pattern = new Pattern(musicalText);
+        System.out.println("Codigo Instrumento: ");
+        int instrumentoInicial = scan.nextInt();
 
+        System.out.println("Ritmo: ");
+        int ritmoInicial = scan.nextInt();
 
-        player.play(pattern);
+        System.out.println("BPM: ");
+        int bpmInicial = scan.nextInt();
+
+        Musica musica = new Musica(textoMusical, instrumentoInicial, ritmoInicial, bpmInicial);
+
+        Tocador tocador = new Tocador();
+        tocador.toca(musica);
     }
 
     /*
@@ -37,4 +41,12 @@ public class Main {
     * Note values Octave    [<int>]     [60]                127       obs: table in GoogleDrive -> TCP
     *
     * */
+
+    /*
+    * Pattern pattern = new Pattern("X[Volume]=10000 C D E F G R A B " +
+    *                              "I[Acoustic_Bass] X[Volume]=0 C D E F G A B I " +
+    *                              "X[Volume]=5200 I[Guitar] C D E F G A B" );
+    *
+    * Pattern pattern = new Pattern(musicalText);
+    */
 }
