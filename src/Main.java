@@ -26,6 +26,9 @@ public class Main {
 
         //Musica musica = new Musica(textoMusical, instrumentoInicial, ritmoInicial, bpmInicial);
 
+        Tradutor tradutor =  new Tradutor();
+
+
         System.out.println(MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("PIANO"));
         System.out.println(MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get(""));
 

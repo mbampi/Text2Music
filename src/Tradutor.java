@@ -1,19 +1,53 @@
+import org.jfugue.pattern.Pattern;
+
 public class Tradutor {
 
-    public static final int MAX_VOLUME = 16383;
-    public static final int MIN_VOLUME = 0;
-    public static final int MAX_TEMPO = 220;
-    public static final int MIN_TEMPO = 40;
-    public static final int MAX_PITCH = 16383;
-    public static final int MIN_PITCH = 0;
-    public static final int MAX_INSTRUMENTO = 127;
-    public static final int MIN_INSTRUMENTO = 0;
+    private static final int MAX_VOLUME = 16383;
+    private static final int MIN_VOLUME = 0;
+    private static final int MAX_TEMPO = 220;
+    private static final int MIN_TEMPO = 40;
+    private static final int MAX_PITCH = 16383;
+    private static final int MIN_PITCH = 0;
+    private static final int MAX_INSTRUMENTO = 127;
+    private static final int MIN_INSTRUMENTO = 0;
+    private static final int VOLUME_DEFAULT = 60; //TODO Volume default
+
+    private char ultimoComando;
+    private int ultimaNota;
+    private int instrumentoAtual;
+    private int volumeAtual;
+
+    public Pattern traduzMusica(Musica musica)
+    {
+        String musicaTraduzida;
+
+        musicaTraduzida = inicializaMusica(musica);
+
+        for (int i=0; i<musica.getTextoMusical().length(); i++)
+        {
+            char c = musica.getTextoMusical().charAt(i);
+            musicaTraduzida += this.traduzComando(c);
+        }
+    }
+
+    private String inicializaMusica(Musica musica)
+    {
+        String inicioMusica;
+        volumeAtual = VOLUME_DEFAULT;
+        instrumentoAtual = musica.getInstrumento();
+        inicioMusica = this.getTempo(musica.getBpm()) + " ";
+        inicioMusica += this.getInstrumento(musica.getInstrumento()) + " ";
+        inicioMusica += this.getVolume(volumeAtual) + " ";
+        // TODO inicioMusica = getRitmo
+
+        return inicioMusica;
+    }
 
 
-    public String traduzComando(char c){
+    private String traduzComando(char c){
         switch (c){
-            case 'A':
-                return getNota(c);
+            case isNota(c):
+                return "" + c;
 
             case ' ':
                 return dobraVolume();
@@ -24,13 +58,8 @@ public class Tradutor {
             case isVogal(c) && !isNota(c):
                 return aumentaVolume10porCento();
 
-            case (isConsoante(c) && !isNota(c)):
-                if(isNota(comandoAnterior))
-                    return repeteNota();
-                return getPausa();
-
             case Character.isDigit(c):
-                trocaInstrumento(intrumento, (int)c);
+                trocaInstrumento((int)c);
 
             case '?':
             case '.':
@@ -48,23 +77,36 @@ public class Tradutor {
             case ',':
                 return getInstrumento(Instrumentos.CHURCH_ORGAN);
 
+            case (isConsoante(c) && !isNota(c)):
             default:
-                if(isNota(comandoAnterior))
+                if(isNota(ultimoComando))
                     return repeteNota();
                 return getPausa();
         }
     }
 
-    private boolean isVogal(char c) {
+    private String getPausa() {
+        return "R";
+    }
+
+    private String repeteNota() {
+        if(isNota(ultimoComando))
+            return ultimoComando+"";
+    }
+
+    private boolean isVogal(char c)
+    {
         c = Character.toUpperCase(c);
         return (c == 'A'  || c == 'E' || c == 'I' || c == 'O' || c == 'U');
     }
 
-    private boolean isConsoante(char c) {
+    private boolean isConsoante(char c)
+    {
         return !isVogal(c);
     }
 
-    public boolean isNota(char comandoAnterior){
+    public boolean isNota(char comandoAnterior)
+    {
         return (c == 'A'  || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G');
     }
 
@@ -86,7 +128,7 @@ public class Tradutor {
         return getVolume((int)Math.round((float)volumeAtual * 1.1));
     }
 
-    public String dobraVolume(int volumeAtual){
+    public String dobraVolume(){
         return getVolume(volumeAtual*2);
     }
 
@@ -114,7 +156,7 @@ public class Tradutor {
 
 
     // Instrumento
-    public String trocaInstrumento(int instrumentoAtual, int digito){
+    public String trocaInstrumento(int digito){
         return getInstrumento(instrumentoAtual + digito);
     }
 
