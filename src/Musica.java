@@ -44,7 +44,7 @@ public class Musica {
         for (int i=0; i<this.textoMusical.length(); i++) {
             char c = this.textoMusical.charAt(i);
 
-            musicaTraduzida += tradutor.getComando(c);
+            musicaTraduzida += tradutor.traduzComando(c);
         }
     }
 

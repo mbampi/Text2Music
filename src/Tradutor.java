@@ -9,16 +9,65 @@ public class Tradutor {
     public static final int MAX_INSTRUMENTO = 127;
     public static final int MIN_INSTRUMENTO = 0;
 
-    public String getComando(char c){
+
+    public String traduzComando(char c){
         switch (c){
             case 'A':
                 return getNota(c);
+
             case ' ':
                 return dobraVolume();
+
             case '!':
-                return getInstrumento()
+                return getInstrumento(Instrumentos.HARPISCHORD);
+
+            case isVogal(c) && !isNota(c):
+                return aumentaVolume10porCento();
+
+            case (isConsoante(c) && !isNota(c)):
+                if(isNota(comandoAnterior))
+                    return repeteNota();
+                return getPausa();
+
+            case Character.isDigit(c):
+                trocaInstrumento(intrumento, (int)c);
+
+            case '?':
+            case '.':
+                if(podeAumentarOitava())
+                    return aumentaOitava();
+                else
+                    return getOitavaDefault();
+
+            case '\n':
+                return getInstrumento(Instrumentos.TUBULAR_BELLS);
+
+            case ';':
+                return getInstrumento(Instrumentos.PAN_FLUTE);
+
+            case ',':
+                return getInstrumento(Instrumentos.CHURCH_ORGAN);
+
+            default:
+                if(isNota(comandoAnterior))
+                    return repeteNota();
+                return getPausa();
         }
     }
+
+    private boolean isVogal(char c) {
+        c = Character.toUpperCase(c);
+        return (c == 'A'  || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+    }
+
+    private boolean isConsoante(char c) {
+        return !isVogal(c);
+    }
+
+    public boolean isNota(char comandoAnterior){
+        return (c == 'A'  || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G');
+    }
+
 
     // Tempo
     public String getTempo(int tempo){
