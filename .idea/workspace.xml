@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f7c01f-2839-46f5-a596-4d122b894ca9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instrumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instrumento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gerador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tradutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Instrumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instrumentos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Musica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tocador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tocador.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,19 +32,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gerador.java">
+        <entry file="file://$PROJECT_DIR$/src/Tradutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+                <element signature="e#1059#1060#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1365#1366#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+                <element signature="e#1619#1620#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,15 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Musica.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
-              <folding>
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="376">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -99,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="7" selection-end-column="17" />
+            <state relative-caret-position="2924">
+              <caret line="172" selection-start-line="172" selection-end-line="172" />
             </state>
           </provider>
         </entry>
@@ -128,11 +122,12 @@
         <option value="$PROJECT_DIR$/src/Tocador.java" />
         <option value="$PROJECT_DIR$/src/Notes.java" />
         <option value="$PROJECT_DIR$/src/Instrumento.java" />
-        <option value="$PROJECT_DIR$/src/Instrumentos.java" />
         <option value="$PROJECT_DIR$/src/Nota.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Gerador.java" />
         <option value="$PROJECT_DIR$/src/Musica.java" />
+        <option value="$PROJECT_DIR$/src/Tradutor.java" />
+        <option value="$PROJECT_DIR$/src/Instrumentos.java" />
       </list>
     </option>
   </component>
@@ -223,12 +218,12 @@
       <workItem from="1557881793948" duration="1549000" />
       <workItem from="1557938030310" duration="5871000" />
       <workItem from="1559780881774" duration="2228000" />
-      <workItem from="1559860238493" duration="4751000" />
+      <workItem from="1559860238493" duration="6258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14399000" />
+    <option name="totallyTimeSpent" value="15906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -269,23 +264,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Tocador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Instrumento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -314,31 +292,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gerador.java">
+    <entry file="file://$PROJECT_DIR$/src/Musica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="376">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tocador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
           <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Musica.java">
+    <entry file="file://$PROJECT_DIR$/src/Tradutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        <state relative-caret-position="306">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding>
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
         </state>
       </provider>
     </entry>

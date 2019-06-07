@@ -1,5 +1,4 @@
 import org.jfugue.pattern.Pattern;
-import org.jfugue.theory.Note;
 
 public class Musica {
 
@@ -13,7 +12,6 @@ public class Musica {
         this.instrumento = instrumento;
         this.ritmo = ritmo;
         this.bpm = bpm;
-        Note.
     }
 
     public Pattern getPattern(){
@@ -39,5 +37,16 @@ public class Musica {
     public void setTextoMusical(String textoMusical) {
         this.textoMusical = textoMusical;
     }
+
+    public void traduzMusica(){
+        String musicaTraduzida = "";
+        Tradutor tradutor = new Tradutor();
+        for (int i=0; i<this.textoMusical.length(); i++) {
+            char c = this.textoMusical.charAt(i);
+
+            musicaTraduzida += tradutor.getComando(c);
+        }
+    }
+
 
 }

@@ -1,4 +1,4 @@
-public class Gerador {
+public class Tradutor {
 
     public static final int MAX_VOLUME = 16383;
     public static final int MIN_VOLUME = 0;
@@ -9,7 +9,16 @@ public class Gerador {
     public static final int MAX_INSTRUMENTO = 127;
     public static final int MIN_INSTRUMENTO = 0;
 
-
+    public String getComando(char c){
+        switch (c){
+            case 'A':
+                return getNota(c);
+            case ' ':
+                return dobraVolume();
+            case '!':
+                return getInstrumento()
+        }
+    }
 
     // Tempo
     public String getTempo(int tempo){
