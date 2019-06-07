@@ -1,6 +1,7 @@
 
-import org.jfugue.pattern.Pattern;
-import org.jfugue.player.Player;
+import org.jfugue.midi.MidiDictionary;
+
+import javax.sound.midi.Instrument;
 import java.util.Scanner;
 
 
@@ -23,7 +24,10 @@ public class Main {
         System.out.println("BPM: ");
         int bpmInicial = scan.nextInt();
 
-        Musica musica = new Musica(textoMusical, instrumentoInicial, ritmoInicial, bpmInicial);
+        //Musica musica = new Musica(textoMusical, instrumentoInicial, ritmoInicial, bpmInicial);
+
+        System.out.println(MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("PIANO"));
+        System.out.println(MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get(""));
 
         Tocador tocador = new Tocador();
         tocador.toca(musica);
