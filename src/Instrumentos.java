@@ -1,461 +1,186 @@
 
-public class Instrumentos {
-    public static final byte PIANO = 0;
-    public static final byte ACOUSTIC_GRAND = 0;
-    public static final byte BRIGHT_ACOUSTIC = 1;
-    public static final byte ELECTRIC_GRAND = 2;
-    public static final byte HONKEY_TONK = 3;
-    public static final byte ELECTRIC_PIANO = 4;
-    public static final byte ELECTRIC_PIANO_1 = 4;
-    public static final byte ELECTRIC_PIANO_2 = 5;
-    public static final byte HARPISCHORD = 6;
-    public static final byte CLAVINET = 7;
-    public static final byte CELESTA = 8;
-    public static final byte GLOCKENSPIEL = 9;
+ public class Instrumentos {
+     static final int MAX_INSTRUMENTO = 127;
+     static final int MIN_INSTRUMENTO = 0;
 
-    public static final byte MUSIC_BOX = 10;
-    public static final byte VIBRAPHONE = 11;
-    public static final byte MARIMBA = 12;
-    public static final byte XYLOPHONE = 13;
-    public static final byte TUBULAR_BELLS = 14;
-    public static final byte DULCIMER = 15;
-    public static final byte DRAWBAR_ORGAN = 16;
-    public static final byte PERCUSSIVE_ORGAN = 17;
-    public static final byte ROCK_ORGAN = 18;
-    public static final byte CHURCH_ORGAN = 19;
+     static final byte PIANO = 0;
+     static final byte ACOUSTIC_GRAND = 0;
+     static final byte BRIGHT_ACOUSTIC = 1;
+     static final byte ELECTRIC_GRAND = 2;
+     static final byte HONKEY_TONK = 3;
+     static final byte ELECTRIC_PIANO = 4;
+     static final byte ELECTRIC_PIANO_1 = 4;
+     static final byte ELECTRIC_PIANO_2 = 5;
+     static final byte HARPISCHORD = 6;
+     static final byte CLAVINET = 7;
+     static final byte CELESTA = 8;
+     static final byte GLOCKENSPIEL = 9;
 
-    public static final byte REED_ORGAN = 20;
-    public static final byte ACCORDIAN = 21;
-    public static final byte HARMONICA = 22;
-    public static final byte TANGO_ACCORDIAN = 23;
-    public static final byte GUITAR = 24;
-    public static final byte NYLON_STRING_GUITAR = 24;
-    public static final byte STEEL_STRING_GUITAR = 25;
-    public static final byte ELECTRIC_JAZZ_GUITAR = 26;
-    public static final byte ELECTRIC_CLEAN_GUITAR = 27;
-    public static final byte ELECTRIC_MUTED_GUITAR = 28;
-    public static final byte OVERDRIVEN_GUITAR = 29;
+     static final byte MUSIC_BOX = 10;
+     static final byte VIBRAPHONE = 11;
+     static final byte MARIMBA = 12;
+     static final byte XYLOPHONE = 13;
+     static final byte TUBULAR_BELLS = 14;
+     static final byte DULCIMER = 15;
+     static final byte DRAWBAR_ORGAN = 16;
+     static final byte PERCUSSIVE_ORGAN = 17;
+     static final byte ROCK_ORGAN = 18;
+     static final byte CHURCH_ORGAN = 19;
 
-    public static final byte DISTORTION_GUITAR = 30;
-    public static final byte GUITAR_HARMONICS = 31;
-    public static final byte ACOUSTIC_BASS = 32;
-    public static final byte ELECTRIC_BASS_FINGER = 33;
-    public static final byte ELECTRIC_BASS_PICK = 34;
-    public static final byte FRETLESS_BASS = 35;
-    public static final byte SLAP_BASS_1 = 36;
-    public static final byte SLAP_BASS_2 = 37;
-    public static final byte SYNTH_BASS_1 = 38;
-    public static final byte SYNTH_BASS_2 = 39;
+     static final byte REED_ORGAN = 20;
+     static final byte ACCORDIAN = 21;
+     static final byte HARMONICA = 22;
+     static final byte TANGO_ACCORDIAN = 23;
+     static final byte GUITAR = 24;
+     static final byte NYLON_STRING_GUITAR = 24;
+     static final byte STEEL_STRING_GUITAR = 25;
+     static final byte ELECTRIC_JAZZ_GUITAR = 26;
+     static final byte ELECTRIC_CLEAN_GUITAR = 27;
+     static final byte ELECTRIC_MUTED_GUITAR = 28;
+     static final byte OVERDRIVEN_GUITAR = 29;
 
-    public static final byte VIOLIN = 40;
-    public static final byte VIOLA = 41;
-    public static final byte CELLO = 42;
-    public static final byte CONTRABASS = 43;
-    public static final byte TREMOLO_STRINGS = 44;
-    public static final byte PIZZICATO_STRINGS = 45;
-    public static final byte ORCHESTRAL_STRINGS = 46;
-    public static final byte TIMPANI = 47;
-    public static final byte STRING_ENSEMBLE_1 = 48;
-    public static final byte STRING_ENSEMBLE_2 = 49;
+     static final byte DISTORTION_GUITAR = 30;
+     static final byte GUITAR_HARMONICS = 31;
+     static final byte ACOUSTIC_BASS = 32;
+     static final byte ELECTRIC_BASS_FINGER = 33;
+     static final byte ELECTRIC_BASS_PICK = 34;
+     static final byte FRETLESS_BASS = 35;
+     static final byte SLAP_BASS_1 = 36;
+     static final byte SLAP_BASS_2 = 37;
+     static final byte SYNTH_BASS_1 = 38;
+     static final byte SYNTH_BASS_2 = 39;
 
-    public static final byte SYNTH_STRINGS_1 = 50;
-    public static final byte SYNTH_STRINGS_2 = 51;
-    public static final byte CHOIR_AAHS = 52;
-    public static final byte VOICE_OOHS = 53;
-    public static final byte SYNTH_VOICE = 54;
-    public static final byte ORCHESTRA_HIT = 55;
-    public static final byte TRUMPET = 56;
-    public static final byte TROMBONE = 57;
-    public static final byte TUBA = 58;
-    public static final byte MUTED_TRUMPET = 59;
+     static final byte VIOLIN = 40;
+     static final byte VIOLA = 41;
+     static final byte CELLO = 42;
+     static final byte CONTRABASS = 43;
+     static final byte TREMOLO_STRINGS = 44;
+     static final byte PIZZICATO_STRINGS = 45;
+     static final byte ORCHESTRAL_STRINGS = 46;
+     static final byte TIMPANI = 47;
+     static final byte STRING_ENSEMBLE_1 = 48;
+     static final byte STRING_ENSEMBLE_2 = 49;
 
-    public static final byte FRENCH_HORN = 60;
-    public static final byte BRASS_SECTION = 61;
-    public static final byte SYNTHBRASS_1 = 62;
-    public static final byte SYNTH_BRASS_1 = 62;
-    public static final byte SYNTHBRASS_2 = 63;
-    public static final byte SYNTH_BRASS_2 = 63;
-    public static final byte SOPRANO_SAX = 64;
-    public static final byte ALTO_SAX = 65;
-    public static final byte TENOR_SAX = 66;
-    public static final byte BARITONE_SAX = 67;
-    public static final byte OBOE = 68;
-    public static final byte ENGLISH_HORN = 69;
+     static final byte SYNTH_STRINGS_1 = 50;
+     static final byte SYNTH_STRINGS_2 = 51;
+     static final byte CHOIR_AAHS = 52;
+     static final byte VOICE_OOHS = 53;
+     static final byte SYNTH_VOICE = 54;
+     static final byte ORCHESTRA_HIT = 55;
+     static final byte TRUMPET = 56;
+     static final byte TROMBONE = 57;
+     static final byte TUBA = 58;
+     static final byte MUTED_TRUMPET = 59;
 
-    public static final byte BASSOON = 70;
-    public static final byte CLARINET = 71;
-    public static final byte PICCOLO = 72;
-    public static final byte FLUTE = 73;
-    public static final byte RECORDER = 74;
-    public static final byte PAN_FLUTE = 75;
-    public static final byte BLOWN_BOTTLE = 76;
-    public static final byte SKAKUHACHI = 77;
-    public static final byte WHISTLE = 78;
-    public static final byte OCARINA = 79;
+     static final byte FRENCH_HORN = 60;
+     static final byte BRASS_SECTION = 61;
+     static final byte SYNTHBRASS_1 = 62;
+     static final byte SYNTH_BRASS_1 = 62;
+     static final byte SYNTHBRASS_2 = 63;
+     static final byte SYNTH_BRASS_2 = 63;
+     static final byte SOPRANO_SAX = 64;
+     static final byte ALTO_SAX = 65;
+     static final byte TENOR_SAX = 66;
+     static final byte BARITONE_SAX = 67;
+     static final byte OBOE = 68;
+     static final byte ENGLISH_HORN = 69;
 
-    public static final byte LEAD_SQUARE = 80;
-    public static final byte SQUARE = 80;
-    public static final byte LEAD_SAWTOOTH = 81;
-    public static final byte SAWTOOTH = 81;
-    public static final byte LEAD_CALLIOPE = 82;
-    public static final byte CALLIOPE = 82;
-    public static final byte LEAD_CHIFF = 83;
-    public static final byte CHIFF = 83;
-    public static final byte LEAD_CHARANG = 84;
-    public static final byte CHARANG = 84;
-    public static final byte LEAD_VOICE = 85;
-    public static final byte VOICE = 85;
-    public static final byte LEAD_FIFTHS = 86;
-    public static final byte FIFTHS = 86;
-    public static final byte LEAD_BASSLEAD = 87;
-    public static final byte BASSLEAD = 87;
-    public static final byte PAD_NEW_AGE = 88;
-    public static final byte NEW_AGE = 88;
-    public static final byte PAD_WARM = 89;
-    public static final byte WARM = 89;
+     static final byte BASSOON = 70;
+     static final byte CLARINET = 71;
+     static final byte PICCOLO = 72;
+     static final byte FLUTE = 73;
+     static final byte RECORDER = 74;
+     static final byte PAN_FLUTE = 75;
+     static final byte BLOWN_BOTTLE = 76;
+     static final byte SKAKUHACHI = 77;
+     static final byte WHISTLE = 78;
+     static final byte OCARINA = 79;
 
-    public static final byte PAD_POLYSYNTH = 90;
-    public static final byte POLYSYNTH = 90;
-    public static final byte PAD_CHOIR = 91;
-    public static final byte CHOIR = 91;
-    public static final byte PAD_BOWED = 92;
-    public static final byte BOWED = 92;
-    public static final byte PAD_METALLIC = 93;
-    public static final byte METALLIC = 93;
-    public static final byte PAD_HALO = 94;
-    public static final byte HALO = 94;
-    public static final byte PAD_SWEEP = 95;
-    public static final byte SWEEP = 95;
-    public static final byte FX_RAIN = 96;
-    public static final byte RAIN = 96;
-    public static final byte FX_SOUNDTRACK = 97;
-    public static final byte SOUNDTRACK = 97;
-    public static final byte FX_CRYSTAL = 98;
-    public static final byte CRYSTAL = 98;
-    public static final byte FX_ATMOSPHERE = 99;
-    public static final byte ATMOSPHERE = 99;
+     static final byte LEAD_SQUARE = 80;
+     static final byte SQUARE = 80;
+     static final byte LEAD_SAWTOOTH = 81;
+     static final byte SAWTOOTH = 81;
+     static final byte LEAD_CALLIOPE = 82;
+     static final byte CALLIOPE = 82;
+     static final byte LEAD_CHIFF = 83;
+     static final byte CHIFF = 83;
+     static final byte LEAD_CHARANG = 84;
+     static final byte CHARANG = 84;
+     static final byte LEAD_VOICE = 85;
+     static final byte VOICE = 85;
+     static final byte LEAD_FIFTHS = 86;
+     static final byte FIFTHS = 86;
+     static final byte LEAD_BASSLEAD = 87;
+     static final byte BASSLEAD = 87;
+     static final byte PAD_NEW_AGE = 88;
+     static final byte NEW_AGE = 88;
+     static final byte PAD_WARM = 89;
+     static final byte WARM = 89;
 
-    public static final byte FX_BRIGHTNESS = 100;
-    public static final byte BRIGHTNESS = 100;
-    public static final byte FX_GOBLINS = 101;
-    public static final byte GOBLINS = 101;
-    public static final byte FX_ECHOES = 102;
-    public static final byte ECHOES = 102;
-    public static final byte FX_SCI = 103;
-    public static final byte SCI = 103;
-    public static final byte SITAR = 104;
-    public static final byte BANJO = 105;
-    public static final byte SHAMISEN = 106;
-    public static final byte KOTO = 107;
-    public static final byte KALIMBA = 108;
-    public static final byte BAGPIPE = 109;
+     static final byte PAD_POLYSYNTH = 90;
+     static final byte POLYSYNTH = 90;
+     static final byte PAD_CHOIR = 91;
+     static final byte CHOIR = 91;
+     static final byte PAD_BOWED = 92;
+     static final byte BOWED = 92;
+     static final byte PAD_METALLIC = 93;
+     static final byte METALLIC = 93;
+     static final byte PAD_HALO = 94;
+     static final byte HALO = 94;
+     static final byte PAD_SWEEP = 95;
+     static final byte SWEEP = 95;
+     static final byte FX_RAIN = 96;
+     static final byte RAIN = 96;
+     static final byte FX_SOUNDTRACK = 97;
+     static final byte SOUNDTRACK = 97;
+     static final byte FX_CRYSTAL = 98;
+     static final byte CRYSTAL = 98;
+     static final byte FX_ATMOSPHERE = 99;
+     static final byte ATMOSPHERE = 99;
 
-    public static final byte FIDDLE = 110;
-    public static final byte SHANAI = 111;
-    public static final byte TINKLE_BELL = 112;
-    public static final byte AGOGO = 113;
-    public static final byte STEEL_DRUMS = 114;
-    public static final byte WOODBLOCK = 115;
-    public static final byte TAIKO_DRUM = 116;
-    public static final byte MELODIC_TOM = 117;
-    public static final byte SYNTH_DRUM = 118;
-    public static final byte REVERSE_CYMBAL = 119;
+     static final byte FX_BRIGHTNESS = 100;
+     static final byte BRIGHTNESS = 100;
+     static final byte FX_GOBLINS = 101;
+     static final byte GOBLINS = 101;
+     static final byte FX_ECHOES = 102;
+     static final byte ECHOES = 102;
+     static final byte FX_SCI = 103;
+     static final byte SCI = 103;
+     static final byte SITAR = 104;
+     static final byte BANJO = 105;
+     static final byte SHAMISEN = 106;
+     static final byte KOTO = 107;
+     static final byte KALIMBA = 108;
+     static final byte BAGPIPE = 109;
 
-    public static final byte GUITAR_FRET_NOISE = 120;
-    public static final byte BREATH_NOISE = 121;
-    public static final byte SEASHORE = 122;
-    public static final byte BIRD_TWEET = 123;
-    public static final byte TELEPHONE_RING = 124;
-    public static final byte HELICOPTER = 125;
-    public static final byte APPLAUSE = 126;
-    public static final byte GUNSHOT = 127;
+     static final byte FIDDLE = 110;
+     static final byte SHANAI = 111;
+     static final byte TINKLE_BELL = 112;
+     static final byte AGOGO = 113;
+     static final byte STEEL_DRUMS = 114;
+     static final byte WOODBLOCK = 115;
+     static final byte TAIKO_DRUM = 116;
+     static final byte MELODIC_TOM = 117;
+     static final byte SYNTH_DRUM = 118;
+     static final byte REVERSE_CYMBAL = 119;
+
+     static final byte GUITAR_FRET_NOISE = 120;
+     static final byte BREATH_NOISE = 121;
+     static final byte SEASHORE = 122;
+     static final byte BIRD_TWEET = 123;
+     static final byte TELEPHONE_RING = 124;
+     static final byte HELICOPTER = 125;
+     static final byte APPLAUSE = 126;
+     static final byte GUNSHOT = 127;
+
+     static boolean isValidInstrument(int instrument){
+         return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
+     }
+
+     static String getInstrumentoCode(int instrumento){
+         if(!isValidInstrument(instrumento))
+             return "";
+         return "I"+instrumento;
+     }
 }
 
-/*
- public static final Map<String,String> DICT_MAP;
-    static {
-    DICT_MAP = MapUtils.convertArrayToImutableMap(new String[][] {
-    {"PIANO"                    ,"0"},
-    {"GRAND"                    ,"0"},
-    {"ACOUSTIC_GRAND"           ,"0"},
-    {"GRAND_PIANO"              ,"0"},
-    {"BRIGHT_ACOUSTIC"          ,"1"},
-    {"ELECTRIC_GRAND"           ,"2"},
-    {"HONKEY_TONK"              ,"3"},
-    {"HONKEYTONK"               ,"3"},
-    {"ELECTRIC_PIANO"           ,"4"},
-    {"ELECTRIC_PIANO_1"         ,"4"},
-    {"ELECTRIC_PIANO_2"         ,"5"},
-    {"HARPISCHORD"              ,"6"},
-    {"CLAVINET"                 ,"7"},
-    {"CELESTA"                  ,"8"},
-    {"GLOCKENSPIEL"             ,"9"},
-
-    {"MUSIC_BOX"                ,"10"},
-    {"VIBRAPHONE"               ,"11"},
-    {"MARIMBA"                  ,"12"},
-    {"XYLOPHONE"                ,"13"},
-    {"BELLS"                    ,"14"},
-    {"TUBULAR_BELLS"            ,"14"},
-    {"DULCIMER"                 ,"15"},
-    {"DRAWBAR_ORGAN"            ,"16"},
-    {"PERCUSSIVE_ORGAN"         ,"17"},
-    {"ROCK_ORGAN"               ,"18"},
-    {"CHURCH_ORGAN"             ,"19"},
-    {"ORGAN"                    ,"19"},
-
-    {"REED_ORGAN"               ,"20"},
-    {"ACCORDIAN"                ,"21"},
-    {"HARMONICA"                ,"22"},
-    {"TANGO_ACCORDIAN"          ,"23"},
-    {"GUITAR"                   ,"24"},
-    {"NYLON_STRING_GUITAR"      ,"24"},
-    {"STEEL_STRING_GUITAR"      ,"25"},
-    {"ELECTRIC_JAZZ_GUITAR"     ,"26"},
-    {"ELECTRIC_CLEAN_GUITAR"    ,"27"},
-    {"ELECTRIC_MUTED_GUITAR"    ,"28"},
-    {"OVERDRIVEN_GUITAR"        ,"29"},
-
-    {"DISTORTION_GUITAR"        ,"30"},
-    {"GUITAR_HARMONICS"         ,"31"},
-    {"ACOUSTIC_BASS"            ,"32"},
-    {"ELECTRIC_BASS_FINGER"     ,"33"},
-    {"ELECTRIC_BASS_PICK"       ,"34"},
-    {"FRETLESS_BASS"            ,"35"},
-    {"SLAP"                     ,"36"},
-    {"SLAP_BASS"                ,"36"},
-    {"SLAP_BASS_1"              ,"36"},
-    {"SLAP_BASS_2"              ,"37"},
-    {"BASS"                     ,"38"},
-    {"SYNTH_BASS"               ,"38"},
-    {"SYNTH_BASS_1"             ,"38"},
-    {"SYNTH_BASS_2"             ,"39"},
-
-    {"VIOLIN"                   ,"40"},
-    {"VIOLA"                    ,"41"},
-    {"CELLO"                    ,"42"},
-    {"CONTRABASS"               ,"43"},
-    {"TREMOLO_STRINGS"          ,"44"},
-    {"PIZZICATO_STRINGS"        ,"45"},
-    {"ORCHESTRAL_STRINGS"       ,"46"},
-    {"TIMPANI"                  ,"47"},
-    {"STRING_ENSEMBLE_1"        ,"48"},
-    {"STRING_ENSEMBLE_2"        ,"49"},
-
-    {"SYNTH"                    ,"50"},
-    {"SYNTHSTRINGS"             ,"50"},
-    {"SYNTH_STRINGS"            ,"50"},
-    {"SYNTH_STRINGS_1"          ,"50"},
-    {"SYNTH_STRINGS_2"          ,"51"},
-    {"CHOIR"                    ,"52"},
-    {"AAHS"                     ,"52"},
-    {"CHOIR_AAHS"               ,"52"},
-    {"VOICE"                    ,"53"},
-    {"OOHS"                     ,"53"},
-    {"VOICE_OOHS"               ,"53"},
-    {"SYNTH_VOICE"              ,"54"},
-    {"ORCHESTRA"                ,"55"},
-    {"ORCHESTRA_HIT"            ,"55"},
-    {"TRUMPET"                  ,"56"},
-    {"TROMBONE"                 ,"57"},
-    {"TUBA"                     ,"58"},
-    {"MUTED_TRUMPET"            ,"59"},
-
-    {"FRENCH_HORN"              ,"60"},
-    {"BRASS"                    ,"61"},
-    {"BRASS_SECTION"            ,"61"},
-    {"SYNTHBRASS_1"             ,"62"},
-    {"SYNTH_BRASS_1"            ,"62"},
-    {"SYNTHBRASS_2"             ,"63"},
-    {"SYNTH_BRASS_2"            ,"63"},
-    {"SOPRANO_SAX"              ,"64"},
-    {"SAX"                      ,"65"},
-    {"SAXOPHONE"                ,"65"},
-    {"ALTO_SAX"                 ,"65"},
-    {"TENOR_SAX"                ,"66"},
-    {"BARITONE_SAX"             ,"67"},
-    {"OBOE"                     ,"68"},
-    {"HORN"                     ,"69"},
-    {"ENGLISH_HORN"             ,"69"},
-
-    {"BASSOON"                  ,"70"},
-    {"CLARINET"                 ,"71"},
-    {"PICCOLO"                  ,"72"},
-    {"FLUTE"                    ,"73"},
-    {"RECORDER"                 ,"74"},
-    {"PANFLUTE"                 ,"75"},
-    {"PAN_FLUTE"                ,"75"},
-    {"BLOWN_BOTTLE"             ,"76"},
-    {"SKAKUHACHI"               ,"77"},
-    {"WHISTLE"                  ,"78"},
-    {"OCARINA"                  ,"79"},
-
-    {"LEAD_SQUARE"              ,"80"},
-    {"SQUARE"                   ,"80"},
-    {"LEAD_SAWTOOTH"            ,"81"},
-    {"SAWTOOTH"                 ,"81"},
-    {"LEAD_CALLIOPE"            ,"82"},
-    {"CALLIOPE"                 ,"82"},
-    {"LEAD_CHIFF"               ,"83"},
-    {"CHIFF"                    ,"83"},
-    {"LEAD_CHARANG"             ,"84"},
-    {"CHARANG"                  ,"84"},
-    {"LEAD_VOICE"               ,"85"},
-    {"VOICE"                    ,"85"},
-    {"LEAD_FIFTHS"              ,"86"},
-    {"FIFTHS"                   ,"86"},
-    {"LEAD_BASSLEAD"            ,"87"},
-    {"BASSLEAD"                 ,"87"},
-    {"PAD_NEW_AGE"              ,"88"},
-    {"NEW_AGE"                  ,"88"},
-    {"PAD_WARM"                 ,"89"},
-    {"WARM"                     ,"89"},
-
-    {"PAD_POLYSYNTH"            ,"90"},
-    {"POLYSYNTH"                ,"90"},
-    {"PAD_CHOIR"                ,"91"},
-    {"CHOIR"                    ,"91"},
-    {"PAD_BOWED"                ,"92"},
-    {"BOWED"                    ,"92"},
-    {"PAD_METALLIC"             ,"93"},
-    {"METALLIC"                 ,"93"},
-    {"PAD_HALO"                 ,"94"},
-    {"HALO"                     ,"94"},
-    {"PAD_SWEEP"                ,"95"},
-    {"SWEEP"                    ,"95"},
-    {"FX_RAIN"                  ,"96"},
-    {"RAIN"                     ,"96"},
-    {"FX_SOUNDTRACK"            ,"97"},
-    {"SOUNDTRACK"               ,"97"},
-    {"FX_CRYSTAL"               ,"98"},
-    {"CRYSTAL"                  ,"98"},
-    {"FX_ATMOSPHERE"            ,"99"},
-    {"ATMOSPHERE"               ,"99"},
-
-    {"FX_BRIGHTNESS"            ,"100"},
-    {"BRIGHTNESS"               ,"100"},
-    {"FX_GOBLINS"               ,"101"},
-    {"GOBLINS"                  ,"101"},
-    {"FX_ECHOES"                ,"102"},
-    {"ECHOES"                   ,"102"},
-    {"FX_SCI-FI"                ,"103"},
-    {"SCI-FI"                   ,"103"},
-    {"SITAR"                    ,"104"},
-    {"BANJO"                    ,"105"},
-    {"SHAMISEN"                 ,"106"},
-    {"KOTO"                     ,"107"},
-    {"KALIMBA"                  ,"108"},
-    {"BAGPIPE"                  ,"109"},
-
-    {"FIDDLE"                   ,"110"},
-    {"SHANAI"                   ,"111"},
-    {"TINKLE_BELL"              ,"112"},
-    {"AGOGO"                    ,"113"},
-    {"STEEL_DRUMS"              ,"114"},
-    {"WOODBLOCK"                ,"115"},
-    {"TAIKO"                    ,"116"},
-    {"TAIKO_DRUM"               ,"116"},
-    {"MELODIC_TOM"              ,"117"},
-    {"SYNTH_DRUM"               ,"118"},
-    {"REVERSE_CYMBAL"           ,"119"},
-
-    {"GUITAR_FRET_NOISE"        ,"120"},
-    {"BREATH_NOISE"             ,"121"},
-    {"SEASHORE"                 ,"122"},
-    {"BIRD_TWEET"               ,"123"},
-    {"BIRD"                     ,"123"},
-    {"TWEET"                    ,"123"},
-    {"TELEPHONE"                ,"124"},
-    {"TELEPHONE_RING"           ,"124"},
-    {"HELICOPTER"               ,"125"},
-    {"APPLAUSE"                 ,"126"},
-    {"GUNSHOT"                  ,"127"},
-
-    //
-    // Percussion names
-    //
-    {"ACOUSTIC_BASS_DRUM"     ,"35"},
-    {"BASS"                   ,"36"},
-    {"BASS_DRUM"              ,"36"},
-    {"SIDE_STICK"             ,"37"},
-    {"SIDESTICK"              ,"37"},
-    {"STICK"                  ,"37"},
-    {"ACOUSTIC_SNARE"         ,"38"},
-    {"SNARE"                  ,"38"},
-    {"HAND_CLAP"              ,"39"},
-    {"CLAP"                   ,"39"},
-
-    {"ELECTRIC_SNARE"         ,"40"},
-    {"LOW_FLOOR_TOM"          ,"41"},
-    {"CLOSED_HI_HAT"          ,"42"},
-    {"HIGH_FLOOR_TOM"         ,"43"},
-    {"PEDAL_HI_HAT"           ,"44"},
-    {"LO_TOM"                 ,"45"},
-    {"LOW_TOM"                ,"45"},
-    {"HI_HAT"                 ,"46"},
-    {"HIHAT"                  ,"46"},
-    {"OPEN_HI_HAT"            ,"46"},
-    {"LOW_MID_TOM"            ,"47"},
-    {"HI_MID_TOM"             ,"48"},
-    {"CYMBAL"                 ,"49"},
-    {"CRASH_CYMBAL"           ,"49"},
-    {"CRASH_CYMBAL_1"         ,"49"},
-
-    {"HI_TOM"                 ,"50"},
-    {"HIGH_TOM"               ,"50"},
-    {"RIDE"                   ,"51"},
-    {"RIDE_CYMBAL"            ,"51"},
-    {"RIDE_CYMBAL_1"          ,"51"},
-    {"CHINESE_CYMBAL"         ,"52"},
-    {"RIDE_BELL"              ,"53"},
-    {"TAMBOURINE"             ,"54"},
-    {"SPLASH_CYMBAL"          ,"55"},
-    {"COWBELL"                ,"56"},
-    {"CRASH_CYMBAL_2"         ,"57"},
-    {"VIBRASLAP"              ,"58"},
-    {"RIDE_CYMBAL_2"          ,"59"},
-
-    {"BONGO"                  ,"60"},
-    {"HI_BONGO"               ,"60"},
-    {"LOW_BONGO"              ,"61"},
-    {"MUTE_HI_CONGA"          ,"62"},
-    {"CONGA"                  ,"63"},
-    {"HI_CONGA"               ,"63"},
-    {"OPEN_HI_CONGA"          ,"63"},
-    {"LO_CONGA"               ,"64"},
-    {"LOW_CONGA"              ,"64"},
-    {"TIMBALE"                ,"65"},
-    {"HI_TIMBALE"             ,"65"},
-    {"HIGH_TIMBALE"           ,"65"},
-    {"LO_TIMBALE"             ,"66"},
-    {"LOW_TIMBALE"            ,"66"},
-    {"AGOGO"                  ,"67"},
-    {"HI_AGOGO"               ,"67"},
-    {"HIGH_AGOGO"             ,"67"},
-    {"LO_AGOGO"               ,"68"},
-    {"LOW_AGOGO"              ,"68"},
-    {"CABASA"                 ,"69"},
-
-    {"MARACAS"                ,"70"},
-    {"WHISTLE"                ,"71"},
-    {"SHORT_WHISTLE"          ,"71"},
-    {"LONG_WHISTLE"           ,"72"},
-    {"GUIRO"                  ,"73"},
-    {"SHORT_GUIRO"            ,"73"},
-    {"LONG_GUIRO"             ,"74"},
-    {"CLAVES"                 ,"75"},
-    {"WOOD_BLOCK"             ,"76"},
-    {"WOODBLOCK"              ,"76"},
-    {"HI_WOOD_BLOCK"          ,"76"},
-    {"LOW_WOOD_BLOCK"         ,"77"},
-    {"MUTE_CUICA"             ,"78"},
-    {"CUICA"                  ,"79"},
-    {"OPEN_CUICA"             ,"79"},
-
-    {"MUTE_TRIANGLE"          ,"80"},
-    {"TRIANGLE"               ,"81"},
-    {"OPEN_TRIANGLE"          ,"81"},
-});
-*/
-
-}

@@ -14,6 +14,10 @@ public class Musica {
         this.bpm = bpm;
     }
 
+    public Pattern getMusicPattern(){
+        return Tradutor.traduzMusica(this);
+    }
+
     public String getTextoMusical() {
         return textoMusical;
     }
