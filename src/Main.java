@@ -14,13 +14,10 @@ public class Main {
         System.out.println("Codigo Instrumento: ");
         int instrumentoInicial = scan.nextInt();
 
-        System.out.println("Ritmo: ");
-        int ritmoInicial = scan.nextInt();
-
         System.out.println("BPM: ");
         int bpmInicial = scan.nextInt();
 
-        Musica musica = new Musica(textoMusical, instrumentoInicial, ritmoInicial, bpmInicial);
+        Musica musica = new Musica(textoMusical, instrumentoInicial, bpmInicial);
 
         Tradutor tradutor =  new Tradutor();
         tradutor.traduzMusica(musica);

@@ -4,8 +4,8 @@ public class Tradutor {
 
     private static final int MAX_VOLUME = 16383;
     private static final int MIN_VOLUME = 0;
-    private static final int MAX_TEMPO = 220;
-    private static final int MIN_TEMPO = 40;
+    private static final int MAX_BPM = 220;
+    private static final int MIN_BPM = 40;
     private static final int VOLUME_DEFAULT = 60; //TODO Volume default
 
     private char ultimoComando;
@@ -23,7 +23,7 @@ public class Tradutor {
         for (int i=0; i<musica.getTextoMusical().length(); i++)
         {
             char c = musica.getTextoMusical().charAt(i);
-            musicaTraduzida += this.traduzComando(c);
+            musicaTraduzida += this.traduzComando(c) + ' ';
         }
 
         return new Pattern(musicaTraduzida);
@@ -32,12 +32,14 @@ public class Tradutor {
     private String inicializaMusica(Musica musica)
     {
         String inicioMusica;
-        volumeAtual = VOLUME_DEFAULT;
-        instrumentoAtual = musica.getInstrumento();
-        inicioMusica = this.getTempo(musica.getBpm()) + " ";
-        inicioMusica += Instrumentos.getInstrumentoCode(musica.getInstrumento()) + " ";
-        inicioMusica += this.getVolume(volumeAtual) + " ";
-        // TODO inicioMusica = getRitmo
+
+        this.volumeAtual = VOLUME_DEFAULT;
+        inicioMusica = this.getVolume(this.volumeAtual) + " ";
+
+        this.instrumentoAtual = musica.getInstrumento();
+        inicioMusica += Instrumentos.getInstrumentoCode(this.instrumentoAtual) + " ";
+
+        inicioMusica += this.getBPM(musica.getBpm()) + " ";
 
         return inicioMusica;
     }
@@ -93,15 +95,15 @@ public class Tradutor {
     }
 
 
-    // Tempo
-    public String getTempo(int tempo){
-        if(!tempoIsValid(tempo))
+    // BPM (RITMO)
+    public String getBPM(int bpm){
+        if(!bpmIsValid(bpm))
             return "";
-        return "T"+tempo;
+        return "T" + bpm;
     }
 
-    private boolean tempoIsValid(int tempo){
-        return (tempo >= MIN_TEMPO && tempo <= MAX_TEMPO);
+    private boolean bpmIsValid(int bpm){
+        return (bpm >= MIN_BPM && bpm <= MAX_BPM);
     }
 
 

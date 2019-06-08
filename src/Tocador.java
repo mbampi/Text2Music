@@ -5,7 +5,7 @@ public class Tocador {
 
     public static void toca(Musica musica){
         Player player = new Player();
-        Pattern pattern = musica.getPattern();
+        Pattern pattern = musica.getMusicPattern();
         player.play(pattern);
     }
 
