@@ -1,7 +1,7 @@
 
- public class Instrumentos {
-     static final int MAX_INSTRUMENTO = 127;
-     static final int MIN_INSTRUMENTO = 0;
+ class Instrumentos {
+     private static final int MAX_INSTRUMENTO = 127;
+     private static final int MIN_INSTRUMENTO = 0;
 
      static final byte PIANO = 0;
      static final byte ACOUSTIC_GRAND = 0;
@@ -181,6 +181,12 @@
          if(!isValidInstrument(instrumento))
              return "";
          return "I"+instrumento;
+     }
+
+     static int trocaInstrumento(int instrumentoAtual, int digito){
+         if(!isValidInstrument(instrumentoAtual + digito))
+             return instrumentoAtual;
+         return instrumentoAtual+digito;
      }
 }
 

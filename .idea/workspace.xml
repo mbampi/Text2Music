@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f7c01f-2839-46f5-a596-4d122b894ca9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_JUnit_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Text2Music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Text2Music.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Text2Music/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Text2Music/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Instrumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instrumentos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Musica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nota.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tocador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tocador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tradutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tradutor.java" afterDir="false" />
     </list>
@@ -19,11 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="170">
+              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,20 +41,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tradutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+            <state relative-caret-position="430">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
-                <element signature="e#2425#2426#0" expanded="true" />
-                <element signature="e#2661#2662#0" expanded="true" />
-                <element signature="e#2962#2963#0" expanded="true" />
-                <element signature="e#3027#3028#0" expanded="true" />
-                <element signature="e#3214#3215#0" expanded="true" />
-                <element signature="e#3261#3262#0" expanded="true" />
-                <element signature="e#3451#3452#0" expanded="true" />
-                <element signature="e#3520#3521#0" expanded="true" />
-                <element signature="e#3604#3605#0" expanded="true" />
-                <element signature="e#3687#3688#0" expanded="true" />
+                <element signature="e#2624#2625#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Volume.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ritmo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+              <folding>
+                <element signature="e#194#195#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/TradutorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -52,11 +93,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tocador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="186" column="13" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -77,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Nota.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="408">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="e#247#248#0" expanded="true" />
                 <element signature="e#293#294#0" expanded="true" />
@@ -86,18 +136,28 @@
                 <element signature="e#368#369#0" expanded="true" />
                 <element signature="e#268#269#0" expanded="true" />
                 <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
+        <entry file="file://$PROJECT_DIR$/tests/InstrumentosTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="442">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <folding>
+                <element signature="e#138#139#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#483#484#0" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,6 +169,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -127,12 +188,16 @@
         <option value="$PROJECT_DIR$/src/Notes.java" />
         <option value="$PROJECT_DIR$/src/Instrumento.java" />
         <option value="$PROJECT_DIR$/src/Gerador.java" />
-        <option value="$PROJECT_DIR$/src/Instrumentos.java" />
-        <option value="$PROJECT_DIR$/src/Nota.java" />
-        <option value="$PROJECT_DIR$/src/Tocador.java" />
         <option value="$PROJECT_DIR$/src/Musica.java" />
-        <option value="$PROJECT_DIR$/src/Tradutor.java" />
+        <option value="$PROJECT_DIR$/src/Tocador.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Ritmo.java" />
+        <option value="$PROJECT_DIR$/src/Volume.java" />
+        <option value="$PROJECT_DIR$/src/Tradutor.java" />
+        <option value="$PROJECT_DIR$/tests/TradutorTest.java" />
+        <option value="$PROJECT_DIR$/src/Nota.java" />
+        <option value="$PROJECT_DIR$/src/Instrumentos.java" />
+        <option value="$PROJECT_DIR$/tests/InstrumentosTest.java" />
       </list>
     </option>
   </component>
@@ -162,6 +227,11 @@
               <item name="Text2Music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Text2Music" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Text2Music" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -172,14 +242,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jfugue-5.0.9.jar!/" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/jdk-12.0.1/jmods" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,7 +273,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.InstrumentosTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Text2Music" />
@@ -204,8 +284,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InstrumentosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Text2Music" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InstrumentosTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TradutorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Text2Music" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TradutorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TradutorTest.traduzMusica" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Text2Music" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TradutorTest" />
+      <option name="METHOD_NAME" value="traduzMusica" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InstrumentosTest" />
+        <item itemvalue="JUnit.TradutorTest" />
+        <item itemvalue="JUnit.TradutorTest.traduzMusica" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -224,12 +335,44 @@
       <workItem from="1557938030310" duration="5871000" />
       <workItem from="1559780881774" duration="2228000" />
       <workItem from="1559860238493" duration="8453000" />
-      <workItem from="1559938682100" duration="7276000" />
+      <workItem from="1559938682100" duration="12714000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 35m 54s.xml">
+      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 36m 54s.xml">
+      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 37m 48s.xml">
+      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 38m 57s.xml">
+      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 39m 17s.xml">
+      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest - 2019.06.08 at 11h 39m 54s.xml">
+      <configuration name="TradutorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TradutorTest - 2019.06.08 at 11h 40m 08s.xml">
+      <configuration name="TradutorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentosTest - 2019.06.08 at 11h 46m 49s.xml">
+      <configuration name="InstrumentosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentosTest - 2019.06.08 at 11h 47m 22s.xml">
+      <configuration name="InstrumentosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentosTest - 2019.06.08 at 11h 51m 50s.xml">
+      <configuration name="InstrumentosTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25377000" />
+    <option name="totallyTimeSpent" value="30815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -244,7 +387,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23895253" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23567921" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,17 +420,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
+    <entry file="file://$PROJECT_DIR$/src/Tocador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tradutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding>
+            <element signature="e#2624#2625#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Volume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ritmo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding>
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Instrumentos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="186" column="13" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/InstrumentosTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Nota.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="408">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="e#247#248#0" expanded="true" />
             <element signature="e#293#294#0" expanded="true" />
@@ -295,8 +514,6 @@
             <element signature="e#368#369#0" expanded="true" />
             <element signature="e#268#269#0" expanded="true" />
             <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -312,39 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tocador.java">
+    <entry file="file://$PROJECT_DIR$/tests/TradutorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tradutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-          <folding>
-            <element signature="e#2425#2426#0" expanded="true" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
-            <element signature="e#3261#3262#0" expanded="true" />
-            <element signature="e#3451#3452#0" expanded="true" />
-            <element signature="e#3520#3521#0" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="306">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -403,6 +591,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -410,6 +599,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: Arquillian JUnit:Release</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

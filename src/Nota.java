@@ -12,16 +12,12 @@ public class Nota {
         return ultimaNota + "" + oitava;
     }
 
-    public String getNota(char c){
-        return c + "" + oitava;
+    public String getNota(char nota){
+        return nota + "" + oitava;
     }
 
     private boolean podeAumentarOitava(){
         return this.oitava + 1 <= MAX_OITAVA;
-    }
-
-    private boolean podeDiminuirOitava(){
-        return oitava  >= MIN_OITAVA;
     }
 
     public void aumentaOitava() {

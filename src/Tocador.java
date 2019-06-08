@@ -3,10 +3,9 @@ import org.jfugue.player.Player;
 
 public class Tocador {
 
-    public static void toca(Musica musica){
+    public static void toca(Pattern padrao){
         Player player = new Player();
-        Pattern pattern = musica.getMusicPattern();
-        player.play(pattern);
+        player.play(padrao);
     }
 
 }

@@ -1,4 +1,6 @@
 
+import org.jfugue.pattern.Pattern;
+
 import java.util.Scanner;
 
 public class Main {
@@ -20,9 +22,9 @@ public class Main {
         Musica musica = new Musica(textoMusical, instrumentoInicial, bpmInicial);
 
         Tradutor tradutor =  new Tradutor();
-        tradutor.traduzMusica(musica);
-
-        Tocador.toca(musica);
+        Pattern musicaTraduzida = tradutor.traduzMusica(musica);
+        System.out.println(musicaTraduzida);
+        Tocador.toca(musicaTraduzida);
     }
 
     /*
