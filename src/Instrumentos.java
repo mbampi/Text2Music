@@ -3,6 +3,24 @@
      private static final int MAX_INSTRUMENTO = 127;
      private static final int MIN_INSTRUMENTO = 0;
 
+
+     static boolean isValidInstrument(int instrument){
+         return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
+     }
+
+     static String getInstrumentoCode(int instrumento){
+         if(!isValidInstrument(instrumento))
+             return "";
+         return "I"+instrumento;
+     }
+
+     static int trocaInstrumento(int instrumentoAtual, int digito){
+         if(!isValidInstrument(instrumentoAtual + digito))
+             return instrumentoAtual;
+         return instrumentoAtual+digito;
+     }
+
+
      static final byte PIANO = 0;
      static final byte ACOUSTIC_GRAND = 0;
      static final byte BRIGHT_ACOUSTIC = 1;
@@ -172,21 +190,5 @@
      static final byte HELICOPTER = 125;
      static final byte APPLAUSE = 126;
      static final byte GUNSHOT = 127;
-
-     static boolean isValidInstrument(int instrument){
-         return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
-     }
-
-     static String getInstrumentoCode(int instrumento){
-         if(!isValidInstrument(instrumento))
-             return "";
-         return "I"+instrumento;
-     }
-
-     static int trocaInstrumento(int instrumentoAtual, int digito){
-         if(!isValidInstrument(instrumentoAtual + digito))
-             return instrumentoAtual;
-         return instrumentoAtual+digito;
-     }
 }
 

@@ -1,13 +1,13 @@
 import org.jfugue.pattern.Pattern;
 
-public class Tradutor {
+class Tradutor {
 
     private char ultimoComando;
     private Nota nota;
     private int instrumentoAtual;
     private int volumeAtual;
 
-    public Pattern traduzMusica(Musica musica)
+    Pattern traduzMusica(Musica musica)
     {
         String musicaTraduzida;
         musicaTraduzida = inicializaMusica(musica);
@@ -18,6 +18,7 @@ public class Tradutor {
         {
             char c = musica.getTextoMusical().charAt(i);
             musicaTraduzida += this.traduzComando(c) + ' ';
+            ultimoComando = c;
         }
 
         return new Pattern(musicaTraduzida);
@@ -42,15 +43,20 @@ public class Tradutor {
         if(Nota.isNota(c))
             return nota.getNota(c);
 
-        else if(c == ' ')
-            return Volume.dobraVolume(this.volumeAtual);
+        else if(c == ' ') {
+            this.volumeAtual = Volume.dobraVolume(this.volumeAtual);
+            return Volume.getVolume(this.volumeAtual);
+        }
 
         else if(c == '!') {
             this.instrumentoAtual = Instrumentos.HARPISCHORD;
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
-        else if(isVogal(c) && !Nota.isNota(c))
-            return Volume.aumentaVolume10porCento(this.volumeAtual);
+
+        else if(isVogal(c) && !Nota.isNota(c)){
+            this.volumeAtual = Volume.aumentaVolume10porCento(this.volumeAtual);
+            return Volume.getVolume(this.volumeAtual);
+        }
 
         else if(Character.isDigit(c)) {
             this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, (int) c);
@@ -85,16 +91,16 @@ public class Tradutor {
     }
 
 
-    private String getPausa() {
+    private static String getPausa() {
         return "R";
     }
 
-    private boolean isVogal(char c) {
+    private static boolean isVogal(char c) {
         c = Character.toUpperCase(c);
         return (c == 'A'  || c == 'E' || c == 'I' || c == 'O' || c == 'U');
     }
 
-    private boolean isConsoante(char c) {
+    private static boolean isConsoante(char c) {
         return !isVogal(c);
     }
 

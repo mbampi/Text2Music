@@ -30,5 +30,4 @@ public class Nota {
     public static boolean isNota(char c) {
         return (c == 'A'  || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G');
     }
-
 }

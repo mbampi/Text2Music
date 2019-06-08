@@ -1,18 +1,25 @@
-public class Volume {
+class Volume {
 
+    private static final int DOIS = 2;
+    private static final float DEZ_PORCENTO = 1.1f;
     private static final int MAX_VOLUME = 16383;
     private static final int MIN_VOLUME = 0;
-    public static final int VOLUME_DEFAULT = 60; //TODO Volume default
+    static final int VOLUME_DEFAULT = 60; //TODO volume default
 
-    public static String aumentaVolume10porCento(int volume) {
-        return getVolume((int)Math.round((float)volume * 1.1));
+
+    static int aumentaVolume10porCento(int volume) {
+        if(!volumeIsValid((int)(volume * DEZ_PORCENTO)))
+            return volume;
+        return (int)(volume * DEZ_PORCENTO);
     }
 
-    public static String dobraVolume(int volume){
-        return getVolume(volume*2);
+    static int dobraVolume(int volume){
+        if(!volumeIsValid((int)(volume * DOIS)))
+            return volume;
+        return (volume * DOIS);
     }
 
-    public static String getVolume(int volume){
+    static String getVolume(int volume){
         if(!volumeIsValid(volume))
             return "";
         return "X[Volume]="+volume;
