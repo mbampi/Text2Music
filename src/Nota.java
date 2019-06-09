@@ -8,16 +8,12 @@ class Nota {
     private int oitava;
     private char ultimaNota;
 
-    String repeteNota(){
-        return ultimaNota + "" + oitava;
-    }
-
     String getNota(char nota){
         return nota + "" + oitava;
     }
 
-    private boolean podeAumentarOitava(){
-        return this.oitava + 1 <= MAX_OITAVA;
+    String repeteNota(){
+        return ultimaNota + "" + oitava;
     }
 
     void aumentaOitava() {
@@ -27,5 +23,8 @@ class Nota {
             this.oitava = OITAVA_DEFAULT;
     }
 
+    private boolean podeAumentarOitava(){
+        return this.oitava + 1 <= MAX_OITAVA;
+    }
 
 }

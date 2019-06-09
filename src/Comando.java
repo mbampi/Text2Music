@@ -3,7 +3,16 @@ public class Comando {
     private char comando;
     private char ultimoComando;
 
-    public Comando() {
+    Comando() {
+    }
+
+    char getComando() {
+        return comando;
+    }
+
+    void setComando(char comando) {
+        this.ultimoComando = this.comando;
+        this.comando = comando;
     }
 
     boolean isDigito(){
@@ -22,7 +31,7 @@ public class Comando {
         return (c == 'A'  || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G');
     }
 
-    boolean isVogal() {
+    private boolean isVogal() {
         char c = Character.toUpperCase(this.comando);
         return (c == 'A'  || c == 'E' || c == 'I' || c == 'O' || c == 'U');
     }
@@ -37,16 +46,5 @@ public class Comando {
     }
 
 
-    public char getComando() {
-        return comando;
-    }
 
-    public void setComando(char comando) {
-        this.ultimoComando = this.comando;
-        this.comando = comando;
-    }
-
-    public char getUltimoComando() {
-        return ultimoComando;
-    }
 }

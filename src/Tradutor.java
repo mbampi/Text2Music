@@ -4,17 +4,13 @@ class Tradutor {
 
     private static final String PAUSA = "R";
 
-    private Comando comando;
-    private Nota nota;
+    private Comando comando = new Comando();
+    private Nota nota = new Nota();
     private int instrumentoAtual;
     private int volumeAtual;
 
-    Pattern traduzMusica(Musica musica)
-    {
-        StringBuilder musicaTraduzida;
-        musicaTraduzida = new StringBuilder(inicializaMusica(musica));
-        this.nota = new Nota();
-        this.comando = new Comando();
+    Pattern traduzMusica(Musica musica) {
+        StringBuilder musicaTraduzida = new StringBuilder(inicializaMusica(musica));
 
         for (int i=0; i<musica.getTextoMusical().length(); i++)
         {
@@ -25,8 +21,7 @@ class Tradutor {
         return new Pattern(musicaTraduzida.toString());
     }
 
-    private String inicializaMusica(Musica musica)
-    {
+    private String inicializaMusica(Musica musica) {
         String inicioMusica;
 
         this.volumeAtual = Volume.VOLUME_DEFAULT;

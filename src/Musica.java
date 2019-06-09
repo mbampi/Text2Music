@@ -1,6 +1,6 @@
 import org.jfugue.pattern.Pattern;
 
-public class Musica {
+class Musica {
 
     private String textoMusical;
     private int instrumento;
@@ -12,7 +12,7 @@ public class Musica {
         this.bpm = bpm;
     }
 
-    public Pattern getMusicPattern(){
+    Pattern getMusicPattern(){
         Tradutor tradutor = new Tradutor();
         return tradutor.traduzMusica(this);
     }
@@ -28,9 +28,4 @@ public class Musica {
     int getBpm() {
         return bpm;
     }
-
-    public void setTextoMusical(String textoMusical) {
-        this.textoMusical = textoMusical;
-    }
-
 }

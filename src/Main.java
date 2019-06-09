@@ -1,5 +1,5 @@
-
 import org.jfugue.pattern.Pattern;
+import org.jfugue.player.Player;
 
 import java.util.Scanner;
 
@@ -22,9 +22,11 @@ public class Main {
         Musica musica = new Musica(textoMusical, instrumentoInicial, bpmInicial);
 
         Tradutor tradutor =  new Tradutor();
-        Pattern musicaTraduzida = tradutor.traduzMusica(musica);
+        Pattern musicaTraduzida = musica.getMusicPattern();
         System.out.println(musicaTraduzida);
-        Tocador.toca(musicaTraduzida);
+
+        Player player = new Player();
+        player.play(musicaTraduzida);
     }
 
     /*
