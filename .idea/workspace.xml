@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f7c01f-2839-46f5-a596-4d122b894ca9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Instrumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Instrumentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Musica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tradutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tradutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Volume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volume.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Volume.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="63" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="63" />
+            <state relative-caret-position="-153">
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
               <folding>
                 <element signature="e#805#806#0" expanded="true" />
                 <element signature="e#874#875#0" expanded="true" />
@@ -80,14 +76,52 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/VolumeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#138#139#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ritmo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
               <folding>
                 <element signature="e#283#284#0" expanded="true" />
                 <element signature="e#340#341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/RitmoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="e#123#124#0" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,15 +149,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Musica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Nota.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -142,8 +167,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -169,10 +194,12 @@
         <option value="$PROJECT_DIR$/src/Ritmo.java" />
         <option value="$PROJECT_DIR$/src/Instrumentos.java" />
         <option value="$PROJECT_DIR$/src/Musica.java" />
-        <option value="$PROJECT_DIR$/src/Volume.java" />
         <option value="$PROJECT_DIR$/src/Nota.java" />
         <option value="$PROJECT_DIR$/src/Comando.java" />
         <option value="$PROJECT_DIR$/src/Tradutor.java" />
+        <option value="$PROJECT_DIR$/tests/RitmoTest.java" />
+        <option value="$PROJECT_DIR$/src/Volume.java" />
+        <option value="$PROJECT_DIR$/tests/VolumeTest.java" />
       </list>
     </option>
   </component>
@@ -248,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.VolumeTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Text2Music" />
@@ -268,6 +295,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RitmoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Text2Music" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RitmoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TradutorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Text2Music" />
       <option name="PACKAGE_NAME" value="" />
@@ -277,22 +313,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TradutorTest.traduzMusica" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VolumeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Text2Music" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TradutorTest" />
-      <option name="METHOD_NAME" value="traduzMusica" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="VolumeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VolumeTest" />
+        <item itemvalue="JUnit.RitmoTest" />
+        <item itemvalue="JUnit.TradutorTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InstrumentosTest" />
-        <item itemvalue="JUnit.TradutorTest" />
-        <item itemvalue="JUnit.TradutorTest.traduzMusica" />
       </list>
     </recent_temporary>
   </component>
@@ -312,17 +348,11 @@
       <workItem from="1559860238493" duration="8453000" />
       <workItem from="1559938682100" duration="14239000" />
       <workItem from="1560033556198" duration="55000" />
-      <workItem from="1560111846998" duration="2606000" />
+      <workItem from="1560111846998" duration="3239000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 36m 54s.xml">
-      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 37m 48s.xml">
-      <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TradutorTest_traduzMusica - 2019.06.08 at 11h 38m 57s.xml">
       <configuration name="TradutorTest.traduzMusica" configurationId="JUnit" />
     </history-entry>
@@ -347,15 +377,21 @@
     <history-entry file="InstrumentosTest - 2019.06.08 at 14h 11m 57s.xml">
       <configuration name="InstrumentosTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TradutorTest - 2019.06.09 at 18h 08m 53s.xml">
+      <configuration name="TradutorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RitmoTest - 2019.06.09 at 18h 15m 18s.xml">
+      <configuration name="RitmoTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35001000" />
+    <option name="totallyTimeSpent" value="35634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,7 +400,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12274959" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,28 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ritmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Volume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="63" />
-          <folding>
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Nota.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -530,10 +544,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ritmo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/RitmoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#123#124#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Volume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+          <folding>
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/VolumeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
           </folding>
         </state>
       </provider>

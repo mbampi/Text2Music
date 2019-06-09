@@ -7,16 +7,16 @@ class Volume {
     static final int VOLUME_DEFAULT = 60; //TODO volume default
 
 
-    static int aumentaVolume10porCento(int volume) {
-        if(!volumeIsValid((int)(volume * DEZ_PORCENTO)))
-            return volume;
-        return (int)(volume * DEZ_PORCENTO);
+    static int aumentaVolume10porCento(int volumeAtual) {
+        if(!volumeIsValid((int)(volumeAtual * DEZ_PORCENTO)))
+            return volumeAtual;
+        return (int)(volumeAtual * DEZ_PORCENTO);
     }
 
-    static int dobraVolume(int volume){
-        if(!volumeIsValid((int)(volume * DOIS)))
-            return volume;
-        return (volume * DOIS);
+    static int dobraVolume(int volumeAtual){
+        if(!volumeIsValid((int)(volumeAtual * DOIS)))
+            return volumeAtual;
+        return (volumeAtual * DOIS);
     }
 
     static String getVolume(int volume){
