@@ -2,26 +2,27 @@ import org.jfugue.pattern.Pattern;
 
 class Tradutor {
 
-    private char ultimoComando;
+    private static final String PAUSA = "R";
+
+    private Comando comando;
     private Nota nota;
     private int instrumentoAtual;
     private int volumeAtual;
 
     Pattern traduzMusica(Musica musica)
     {
-        String musicaTraduzida;
-        musicaTraduzida = inicializaMusica(musica);
-
+        StringBuilder musicaTraduzida;
+        musicaTraduzida = new StringBuilder(inicializaMusica(musica));
         this.nota = new Nota();
+        this.comando = new Comando();
 
         for (int i=0; i<musica.getTextoMusical().length(); i++)
         {
-            char c = musica.getTextoMusical().charAt(i);
-            musicaTraduzida += this.traduzComando(c) + ' ';
-            ultimoComando = c;
+            comando.setComando(musica.getTextoMusical().charAt(i));
+            musicaTraduzida.append(this.traduzComando(comando)).append(' ');
         }
 
-        return new Pattern(musicaTraduzida);
+        return new Pattern(musicaTraduzida.toString());
     }
 
     private String inicializaMusica(Musica musica)
@@ -39,69 +40,56 @@ class Tradutor {
         return inicioMusica;
     }
 
-    private String traduzComando(char c){
-        if(Nota.isNota(c))
-            return nota.getNota(c);
+    private String traduzComando(Comando comando){
 
-        else if(c == ' ') {
+        if(comando.comandoIsNota())
+            return nota.getNota(comando.getComando());
+
+        else if(comando.getComando() == ' ') {
             this.volumeAtual = Volume.dobraVolume(this.volumeAtual);
             return Volume.getVolume(this.volumeAtual);
         }
 
-        else if(c == '!') {
+        else if(comando.getComando() == '!') {
             this.instrumentoAtual = Instrumentos.HARPISCHORD;
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
 
-        else if(isVogal(c) && !Nota.isNota(c)){
+        else if(comando.isOUI()) {
             this.volumeAtual = Volume.aumentaVolume10porCento(this.volumeAtual);
             return Volume.getVolume(this.volumeAtual);
         }
 
-        else if(Character.isDigit(c)) {
-            this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, (int) c);
+        else if(comando.isDigito()) {
+            this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, (int)comando.getComando());
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
 
-        else if(c == '?' || c == '.')
+        else if(comando.getComando() == '?' || comando.getComando() == '.') {
             nota.aumentaOitava();
-
-        else if(c == '\n') {
+            return "";
+        }
+        else if(comando.getComando() == '\n') {
             this.instrumentoAtual = Instrumentos.TUBULAR_BELLS;
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
 
-        else if(c == ';') {
+        else if(comando.getComando() == ';') {
             this.instrumentoAtual = Instrumentos.PAN_FLUTE;
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
 
-        else if(c == ',') {
+        else if(comando.getComando() == ',') {
             this.instrumentoAtual = Instrumentos.CHURCH_ORGAN;
             return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
         }
 
-        else{ //if(isConsoante(c) && !Nota.isNota(c))
-            if(Nota.isNota(ultimoComando))
+        else{
+            if(comando.ultimoComandoIsNota())
                 return nota.repeteNota();
-            return getPausa();
+            return PAUSA;
         }
-
-        return "";
     }
 
-
-    private static String getPausa() {
-        return "R";
-    }
-
-    private static boolean isVogal(char c) {
-        c = Character.toUpperCase(c);
-        return (c == 'A'  || c == 'E' || c == 'I' || c == 'O' || c == 'U');
-    }
-
-    private static boolean isConsoante(char c) {
-        return !isVogal(c);
-    }
 
 }

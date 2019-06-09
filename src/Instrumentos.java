@@ -3,7 +3,6 @@
      private static final int MAX_INSTRUMENTO = 127;
      private static final int MIN_INSTRUMENTO = 0;
 
-
      static boolean isValidInstrument(int instrument){
          return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
      }
@@ -19,7 +18,6 @@
              return instrumentoAtual;
          return instrumentoAtual+digito;
      }
-
 
      static final byte PIANO = 0;
      static final byte ACOUSTIC_GRAND = 0;

@@ -1,5 +1,5 @@
 
-public class Nota {
+class Nota {
 
     private static final int MAX_OITAVA = 10;
     private static final int MIN_OITAVA = 0;
@@ -8,11 +8,11 @@ public class Nota {
     private int oitava;
     private char ultimaNota;
 
-    public String repeteNota(){
+    String repeteNota(){
         return ultimaNota + "" + oitava;
     }
 
-    public String getNota(char nota){
+    String getNota(char nota){
         return nota + "" + oitava;
     }
 
@@ -20,14 +20,12 @@ public class Nota {
         return this.oitava + 1 <= MAX_OITAVA;
     }
 
-    public void aumentaOitava() {
+    void aumentaOitava() {
         if(podeAumentarOitava())
             this.oitava++;
         else
             this.oitava = OITAVA_DEFAULT;
     }
 
-    public static boolean isNota(char c) {
-        return (c == 'A'  || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G');
-    }
+
 }

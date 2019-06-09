@@ -6,7 +6,7 @@ public class Musica {
     private int instrumento;
     private int bpm;
 
-    public Musica(String textoMusical, int instrumento, int bpm) {
+    Musica(String textoMusical, int instrumento, int bpm) {
         this.textoMusical = textoMusical;
         this.instrumento = instrumento;
         this.bpm = bpm;
@@ -17,15 +17,15 @@ public class Musica {
         return tradutor.traduzMusica(this);
     }
 
-    public String getTextoMusical() {
+    String getTextoMusical() {
         return textoMusical;
     }
 
-    public int getInstrumento() {
+    int getInstrumento() {
         return instrumento;
     }
 
-    public int getBpm() {
+    int getBpm() {
         return bpm;
     }
 
