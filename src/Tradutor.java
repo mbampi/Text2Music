@@ -9,7 +9,7 @@ class Tradutor {
     private int instrumentoAtual;
     private int volumeAtual;
 
-    Pattern traduzMusica(Musica musica) {
+    String traduzMusica(Musica musica) {
         StringBuilder musicaTraduzida = new StringBuilder(inicializaMusica(musica));
 
         for (int i=0; i<musica.getTextoMusical().length(); i++)
@@ -18,7 +18,7 @@ class Tradutor {
             musicaTraduzida.append(this.traduzComando(comando)).append(' ');
         }
 
-        return new Pattern(musicaTraduzida.toString());
+        return musicaTraduzida.toString();
     }
 
     private String inicializaMusica(Musica musica) {

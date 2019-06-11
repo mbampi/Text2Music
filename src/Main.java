@@ -21,12 +21,12 @@ public class Main {
 
         Musica musica = new Musica(textoMusical, instrumentoInicial, bpmInicial);
 
-        Tradutor tradutor =  new Tradutor();
         Pattern musicaTraduzida = musica.getMusicPattern();
         System.out.println(musicaTraduzida);
 
         Player player = new Player();
         player.play(musicaTraduzida);
+
     }
 
     /*
@@ -41,12 +41,4 @@ public class Main {
     * Note values Octave    [<int>]     [60]                127       obs: table in GoogleDrive -> TCP
     *
     * */
-
-    /*
-    * Pattern pattern = new Pattern("X[Volume]=10000 C D E F G R A B " +
-    *                              "I[Acoustic_Bass] X[Volume]=0 C D E F G A B I " +
-    *                              "X[Volume]=5200 I[Guitar] C D E F G A B" );
-    *
-    * Pattern pattern = new Pattern(musicalText);
-    */
 }

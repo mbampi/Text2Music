@@ -3,8 +3,7 @@ public class Comando {
     private char comando;
     private char ultimoComando;
 
-    Comando() {
-    }
+    Comando() { }
 
     char getComando() {
         return comando;
@@ -44,7 +43,5 @@ public class Comando {
     public boolean isConsoante() {
         return !isVogal();
     }
-
-
 
 }

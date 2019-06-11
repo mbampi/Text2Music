@@ -14,7 +14,9 @@ class Musica {
 
     Pattern getMusicPattern(){
         Tradutor tradutor = new Tradutor();
-        return tradutor.traduzMusica(this);
+        String musicaTraduzida = tradutor.traduzMusica(this);
+        Pattern musicPattern = new Pattern(musicaTraduzida);
+        return musicPattern;
     }
 
     String getTextoMusical() {
