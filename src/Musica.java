@@ -1,6 +1,6 @@
 import org.jfugue.pattern.Pattern;
 
-class Musica {
+public class Musica {
 
     private String textoMusical;
     private int instrumento;

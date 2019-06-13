@@ -1,5 +1,3 @@
-import org.jfugue.pattern.Pattern;
-
 class Tradutor {
 
     private static final String PAUSA = "R";
