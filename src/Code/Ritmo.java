@@ -1,9 +1,11 @@
-class Ritmo {
+package Code;
+
+public class Ritmo {
 
     private static final int MAX_BPM = 220;
     private static final int MIN_BPM = 40;
 
-    static String getBPM(int bpm){
+    public static String getBPM(int bpm){
         if(bpmIsValid(bpm))
             return "T" + bpm;
         return "";

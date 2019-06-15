@@ -1,31 +1,31 @@
+import Code.Ritmo;
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class RitmoTest {
 
     @Test
     public void getBPM() {
-        assertEquals("T120", Ritmo.getBPM(120));
+        Assert.assertEquals("T120", Ritmo.getBPM(120));
     }
 
     @Test
     public void getBPMmin() {
-        assertEquals("T40", Ritmo.getBPM(40));
+        Assert.assertEquals("T40", Ritmo.getBPM(40));
     }
 
     @Test
     public void getBPMmax() {
-        assertEquals("T220", Ritmo.getBPM(220));
+        Assert.assertEquals("T220", Ritmo.getBPM(220));
     }
 
     @Test
     public void getBPMabaixoMin() {
-        assertEquals("", Ritmo.getBPM(20));
+        Assert.assertEquals("", Ritmo.getBPM(20));
     }
 
     @Test
     public void getBPMacimaMax() {
-        assertEquals("", Ritmo.getBPM(240));
+        Assert.assertEquals("", Ritmo.getBPM(240));
     }
 }

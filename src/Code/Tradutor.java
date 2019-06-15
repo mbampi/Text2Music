@@ -1,13 +1,15 @@
-class Tradutor {
+package Code;
 
-    private static final String PAUSA = "R";
+import org.jfugue.theory.Note;
+
+public class Tradutor {
 
     private Comando comando = new Comando();
     private Nota nota = new Nota();
     private int instrumentoAtual;
     private int volumeAtual;
 
-    String traduzMusica(Musica musica) {
+    public String traduzMusica(Musica musica) {
         StringBuilder musicaTraduzida = new StringBuilder(inicializaMusica(musica));
 
         for (int i=0; i<musica.getTextoMusical().length(); i++)
@@ -80,7 +82,7 @@ class Tradutor {
         else{
             if(comando.ultimoComandoIsNota())
                 return nota.repeteNota();
-            return PAUSA;
+            return String.valueOf(Note.REST);
         }
     }
 

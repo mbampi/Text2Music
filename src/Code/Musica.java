@@ -1,3 +1,5 @@
+package Code;
+
 import org.jfugue.pattern.Pattern;
 
 public class Musica {
@@ -6,28 +8,28 @@ public class Musica {
     private int instrumento;
     private int bpm;
 
-    Musica(String textoMusical, int instrumento, int bpm) {
+    public Musica(String textoMusical, int instrumento, int bpm) {
         this.textoMusical = textoMusical;
         this.instrumento = instrumento;
         this.bpm = bpm;
     }
 
-    Pattern getMusicPattern(){
+    public Pattern getMusicPattern(){
         Tradutor tradutor = new Tradutor();
         String musicaTraduzida = tradutor.traduzMusica(this);
         Pattern musicPattern = new Pattern(musicaTraduzida);
         return musicPattern;
     }
 
-    String getTextoMusical() {
+    public String getTextoMusical() {
         return textoMusical;
     }
 
-    int getInstrumento() {
+    public int getInstrumento() {
         return instrumento;
     }
 
-    int getBpm() {
+    public int getBpm() {
         return bpm;
     }
 }

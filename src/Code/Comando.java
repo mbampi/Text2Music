@@ -1,3 +1,5 @@
+package Code;
+
 public class Comando {
 
     private char comando;

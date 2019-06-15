@@ -1,8 +1,9 @@
+package Code;
+
+import org.jfugue.theory.Note;
 
 class Nota {
 
-    private static final int MAX_OITAVA = 10;
-    private static final int MIN_OITAVA = 0;
     private static final int OITAVA_DEFAULT = 5;
 
     private int oitava;
@@ -24,7 +25,7 @@ class Nota {
     }
 
     private boolean podeAumentarOitava(){
-        return this.oitava + 1 <= MAX_OITAVA;
+        return this.oitava + 1 <= Note.MAX_OCTAVE;
     }
 
 }
