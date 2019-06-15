@@ -1,5 +1,8 @@
 package Code;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Instrumentos {
      private static final int MAX_INSTRUMENTO = 127;
      private static final int MIN_INSTRUMENTO = 0;
@@ -20,8 +23,7 @@ public class Instrumentos {
          return instrumentoAtual+digito;
      }
 
-
-     public static final String[] NOME_INSTRUMENTO = new String[] {
+     public static final ArrayList<String> listaInstrumentos = new ArrayList<>(Arrays.asList(
              "Piano",
              "Bright_Acoustic",
              "Electric_Grand",
@@ -161,7 +163,8 @@ public class Instrumentos {
              "Telephone_Ring",
              "Helicopter",
              "Applause",
-             "Gunshot" };
+             "Gunshot"
+     ));
 
      static final byte PIANO = 0;
      static final byte ACOUSTIC_GRAND = 0;

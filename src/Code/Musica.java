@@ -17,19 +17,18 @@ public class Musica {
     public Pattern getMusicPattern(){
         Tradutor tradutor = new Tradutor();
         String musicaTraduzida = tradutor.traduzMusica(this);
-        Pattern musicPattern = new Pattern(musicaTraduzida);
-        return musicPattern;
+        return new Pattern(musicaTraduzida);
     }
 
-    public String getTextoMusical() {
+    String getTextoMusical() {
         return textoMusical;
     }
 
-    public int getInstrumento() {
+    int getInstrumento() {
         return instrumento;
     }
 
-    public int getBpm() {
+    int getBpm() {
         return bpm;
     }
 }

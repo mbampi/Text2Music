@@ -1,5 +1,6 @@
 package View;
 
+import Code.Instrumentos;
 import Code.Musica;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -7,9 +8,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
@@ -19,12 +21,13 @@ import org.jfugue.pattern.Pattern;
 import org.jfugue.player.Player;
 
 import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class InterfaceGrafica extends Application {
+public class Controlador extends Application implements Initializable {
 
     @FXML
-    private ChoiceBox<String> instrumentoDropdown;
-    private ObservableList listaInstrumentos = FXCollections.observableArrayList("a");
+    private ComboBox<String> instrumentosDropdown;
     @FXML
     private TextArea textoMusicalInput;
     @FXML
@@ -40,7 +43,16 @@ public class InterfaceGrafica extends Application {
         primaryStage.setTitle("Text2Music");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         carregaDropdown();
+    }
+
+    private void carregaDropdown(){
+        ObservableList<String> obsInstrumentos = FXCollections.observableArrayList(Instrumentos.listaInstrumentos);
+        instrumentosDropdown.setItems(obsInstrumentos);
     }
 
     @FXML
@@ -51,42 +63,6 @@ public class InterfaceGrafica extends Application {
         File file = fileChooser.showOpenDialog(null);
         if(file != null)
             textoMusicalInput.setText(textoMusicalInput.getText() + readFile(file));
-    }
-
-    private void carregaDropdown(){
-    }
-
-    @FXML
-    void salvarMIDI(ActionEvent event) {
-        System.out.println("Salvar MIDI");
-
-        Musica musica = geraMusica();
-        Pattern padraoMusical = musica.getMusicPattern();
-        System.out.println(padraoMusical.toString());
-
-        FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("MIDI files", "*.mid");
-        fileChooser.getExtensionFilters().add(extFilter);
-        File file = fileChooser.showSaveDialog(null);
-        System.out.println(file.toString());
-
-        try {
-            MidiFileManager.savePatternToMidi(padraoMusical, file);
-        } catch (IOException ex) {
-            System.out.println("IO Exception");
-        }
-    }
-
-    @FXML
-    void tocaMusica(ActionEvent event){
-        System.out.println("Tocar Pressed");
-
-        Musica musica = geraMusica();
-        Pattern padraoMusical = musica.getMusicPattern();
-        System.out.println(padraoMusical.toString());
-
-        Player tocador = new Player();
-        tocador.play(padraoMusical);
     }
 
     private String readFile(File file){
@@ -112,10 +88,45 @@ public class InterfaceGrafica extends Application {
         return stringBuffer.toString();
     }
 
+    @FXML
+    void tocaMusica(ActionEvent event){
+        System.out.println("Tocar Pressed");
+
+        Musica musica = geraMusica();
+        Pattern padraoMusical = musica.getMusicPattern();
+        System.out.println(padraoMusical.toString());
+
+        Player tocador = new Player();
+        tocador.play(padraoMusical);
+    }
+
+    @FXML
+    void salvarMIDI(ActionEvent event) {
+        System.out.println("Salvar MIDI");
+
+        Musica musica = geraMusica();
+        Pattern padraoMusical = musica.getMusicPattern();
+        System.out.println(padraoMusical.toString());
+
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("MIDI files", "*.mid");
+        fileChooser.getExtensionFilters().add(extFilter);
+        File file = fileChooser.showSaveDialog(null);
+        System.out.println(file.toString());
+
+        try {
+            MidiFileManager.savePatternToMidi(padraoMusical, file);
+        } catch (IOException ex) {
+            System.out.println("IO Exception");
+        }
+    }
+
     private Musica geraMusica(){
         String textoMusical = textoMusicalInput.getText();
         int ritmo = Integer.valueOf(ritmoInput.getText());
-        int instrumento = 4;
+        String intrumentoSelecionado = instrumentosDropdown.getValue();
+        int instrumento = Instrumentos.listaInstrumentos.indexOf(intrumentoSelecionado);
+
         return new Musica(textoMusical, instrumento, ritmo);
     }
 

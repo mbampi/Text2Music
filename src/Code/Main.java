@@ -20,7 +20,6 @@ public class Main {
 
         System.out.println("BPM: ");
         int bpmInicial = scan.nextInt();
-
         Musica musica = new Musica(textoMusical, instrumentoInicial, bpmInicial);
 
         Pattern musicaTraduzida = musica.getMusicPattern();
@@ -28,19 +27,5 @@ public class Main {
 
         Player player = new Player();
         player.play(musicaTraduzida);
-
     }
-
-    /*
-    * --- MUSIC TOKENS ---
-    *
-    * Function              Command     Example             Max
-    *
-    * Instrument            I           I[Piano] or I12     127
-    * Rest                  R           R
-    * Tempo(BPM)            T           T120
-    * Volume                X[Volume]   X[Volume]=10200     16383
-    * Note values Octave    [<int>]     [60]                127       obs: table in GoogleDrive -> TCP
-    *
-    * */
 }
