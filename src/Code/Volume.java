@@ -9,19 +9,19 @@ public class Volume {
     private static final int MIN_VOLUME = 0;
     static final int VOLUME_DEFAULT = 10000;
 
-    public static int aumentaVolume10porCento(int volumeAtual) {
+    public static int aumentaDezPorCento(int volumeAtual) {
         if(!volumeIsValid((int)(volumeAtual * DEZ_PORCENTO)))
             return volumeAtual;
         return (int)(volumeAtual * DEZ_PORCENTO);
     }
 
-    public static int dobraVolume(int volumeAtual){
+    public static int dobra(int volumeAtual){
         if (!volumeIsValid((int) (volumeAtual * DOIS)))
             return volumeAtual;
         return (volumeAtual * DOIS);
     }
 
-    public static String getVolume(int volume){
+    public static String getVolumeToken(int volume){
         if(!volumeIsValid(volume))
             return "";
         return "X[Volume]="+volume;

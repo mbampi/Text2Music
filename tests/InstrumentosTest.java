@@ -32,19 +32,19 @@ public class InstrumentosTest {
 
     @Test
     public void getInstrumentoCode0() {
-        String instrumentoCode = Instrumentos.getInstrumentoCode(0);
+        String instrumentoCode = Instrumentos.getInstrumentoToken(0);
         assertEquals("I0", instrumentoCode);
     }
 
     @Test
     public void getInstrumentoCode114() {
-        String instrumentoCode = Instrumentos.getInstrumentoCode(114);
+        String instrumentoCode = Instrumentos.getInstrumentoToken(114);
         assertEquals("I114", instrumentoCode);
     }
 
     @Test
     public void getInstrumentoCodeInvalido160() {
-        String instrumentoCode = Instrumentos.getInstrumentoCode(160);
+        String instrumentoCode = Instrumentos.getInstrumentoToken(160);
         assertEquals("", instrumentoCode);
     }
 

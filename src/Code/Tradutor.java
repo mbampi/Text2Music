@@ -25,12 +25,12 @@ public class Tradutor {
         String inicioMusica;
 
         this.volumeAtual = Volume.VOLUME_DEFAULT;
-        inicioMusica = Volume.getVolume(this.volumeAtual) + " ";
+        inicioMusica = Volume.getVolumeToken(this.volumeAtual) + " ";
 
         this.instrumentoAtual = musica.getInstrumento();
-        inicioMusica += Instrumentos.getInstrumentoCode(this.instrumentoAtual) + " ";
+        inicioMusica += Instrumentos.getInstrumentoToken(this.instrumentoAtual) + " ";
 
-        inicioMusica += Ritmo.getBPM(musica.getBpm()) + " ";
+        inicioMusica += Ritmo.getRitmoToken(musica.getBpm()) + " ";
 
         return inicioMusica;
     }
@@ -38,26 +38,26 @@ public class Tradutor {
     private String traduzComando(Comando comando){
 
         if(comando.comandoIsNota())
-            return nota.getNota(comando.getComando());
+            return nota.getNotaToken(comando.getComando());
 
         else if(comando.getComando() == ' ') {
-            this.volumeAtual = Volume.dobraVolume(this.volumeAtual);
-            return Volume.getVolume(this.volumeAtual);
+            this.volumeAtual = Volume.dobra(this.volumeAtual);
+            return Volume.getVolumeToken(this.volumeAtual);
         }
 
         else if(comando.getComando() == '!') {
             this.instrumentoAtual = Instrumentos.HARPISCHORD;
-            return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
+            return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
         else if(comando.isOUI()) {
-            this.volumeAtual = Volume.aumentaVolume10porCento(this.volumeAtual);
-            return Volume.getVolume(this.volumeAtual);
+            this.volumeAtual = Volume.aumentaDezPorCento(this.volumeAtual);
+            return Volume.getVolumeToken(this.volumeAtual);
         }
 
         else if(comando.isDigito()) {
             this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, (int)comando.getComando());
-            return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
+            return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
         else if(comando.getComando() == '?' || comando.getComando() == '.') {
@@ -66,17 +66,17 @@ public class Tradutor {
         }
         else if(comando.getComando() == '\n') {
             this.instrumentoAtual = Instrumentos.TUBULAR_BELLS;
-            return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
+            return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
         else if(comando.getComando() == ';') {
             this.instrumentoAtual = Instrumentos.PAN_FLUTE;
-            return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
+            return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
         else if(comando.getComando() == ',') {
             this.instrumentoAtual = Instrumentos.CHURCH_ORGAN;
-            return Instrumentos.getInstrumentoCode(this.instrumentoAtual);
+            return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
         else{
@@ -85,6 +85,5 @@ public class Tradutor {
             return String.valueOf(Note.REST);
         }
     }
-
-
+    
 }

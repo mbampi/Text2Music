@@ -25,7 +25,7 @@
             <TextField fx:id="ritmoInput" layoutX="429.0" layoutY="156.0" text="120" />
             <Label layoutX="430.0" layoutY="139.0" text="Ritmo (BPM)" />
             <Button layoutX="336.0" layoutY="110.0" mnemonicParsing="false" onAction="#carregaMusica" text="Carregar..." />
-            <Button layoutX="453.0" layoutY="356.0" mnemonicParsing="false" onAction="#salvarMIDI" prefHeight="25.0" prefWidth="101.0" text="Salvar Musica" />
+            <Button layoutX="453.0" layoutY="356.0" mnemonicParsing="false" onAction="#salvaMIDI" prefHeight="25.0" prefWidth="101.0" text="Salvar Musica" />
             <ComboBox fx:id="instrumentosDropdown" layoutX="428.0" layoutY="226.0" prefWidth="150.0" />
          </children>
       </Pane>

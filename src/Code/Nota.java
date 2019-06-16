@@ -9,7 +9,8 @@ class Nota {
     private int oitava;
     private char ultimaNota;
 
-    String getNota(char nota){
+    String getNotaToken(char nota){
+        this.ultimaNota = nota;
         return nota + "" + oitava;
     }
 
@@ -27,5 +28,4 @@ class Nota {
     private boolean podeAumentarOitava(){
         return this.oitava + 1 <= Note.MAX_OCTAVE;
     }
-
 }

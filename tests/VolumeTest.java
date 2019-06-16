@@ -7,16 +7,16 @@ public class VolumeTest {
 
     @Test
     public void aumentaVolume10porCento() {
-        assertEquals(110, Volume.aumentaVolume10porCento(100));
+        assertEquals(110, Volume.aumentaDezPorCento(100));
     }
 
     @Test
     public void dobraVolume() {
-        assertEquals(200, Volume.dobraVolume(100));
+        assertEquals(200, Volume.dobra(100));
     }
 
     @Test
     public void getVolume() {
-        assertEquals("X[Volume]=100", Volume.getVolume(100));
+        assertEquals("X[Volume]=100", Volume.getVolumeToken(100));
     }
 }

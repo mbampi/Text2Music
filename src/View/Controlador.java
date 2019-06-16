@@ -2,6 +2,7 @@ package View;
 
 import Code.Instrumentos;
 import Code.Musica;
+import Code.Ritmo;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,10 +34,10 @@ public class Controlador extends Application implements Initializable {
     @FXML
     private TextField ritmoInput;
 
+
     public static void main(String[] args) {
         launch(args);
     }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../resources/InterfaceGrafica.fxml"));
@@ -44,25 +45,16 @@ public class Controlador extends Application implements Initializable {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         carregaDropdown();
-        limitaInputRitmo();
-        limitaInputTextoMusical();
+        limitaEntradaRitmo();
     }
 
-    private void limitaInputRitmo(){
+    private void limitaEntradaRitmo(){
         ritmoInput.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*"))
                 ritmoInput.setText(newValue.replaceAll("[^\\d]", ""));
-        });
-    }
-
-    private void limitaInputTextoMusical(){
-        textoMusicalInput.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("^\\d*"))
-                textoMusicalInput.setText(newValue.replaceAll("[\\d]", ""));
         });
     }
 
@@ -70,6 +62,7 @@ public class Controlador extends Application implements Initializable {
         ObservableList<String> obsInstrumentos = FXCollections.observableArrayList(Instrumentos.listaInstrumentos);
         instrumentosDropdown.setItems(obsInstrumentos);
     }
+
 
     @FXML
     void carregaMusica(ActionEvent event) {
@@ -119,7 +112,7 @@ public class Controlador extends Application implements Initializable {
     }
 
     @FXML
-    void salvarMIDI(ActionEvent event) {
+    void salvaMIDI(ActionEvent event) {
         System.out.println("Salvar MIDI");
 
         if(inputCorreto()) {
@@ -150,6 +143,7 @@ public class Controlador extends Application implements Initializable {
         return new Musica(textoMusical, instrumento, ritmo);
     }
 
+
     private Boolean inputCorreto(){
         if(!textoMusicalCorreto())
             Erros.exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
@@ -166,7 +160,7 @@ public class Controlador extends Application implements Initializable {
     }
 
     private Boolean ritmoCorreto(){
-        return !ritmoInput.getText().isEmpty();
+        return !ritmoInput.getText().isEmpty() && Ritmo.ritmoValido(Integer.valueOf(ritmoInput.getText()));
     }
 
     private Boolean intrumentoCorreto(){

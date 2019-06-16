@@ -11,7 +11,7 @@ public class Instrumentos {
          return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
      }
 
-     public static String getInstrumentoCode(int instrumento){
+     public static String getInstrumentoToken(int instrumento){
          if(!isValidInstrument(instrumento))
              return "";
          return "I"+instrumento;
