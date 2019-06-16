@@ -11,7 +11,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -49,6 +48,22 @@ public class Controlador extends Application implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         carregaDropdown();
+        limitaInputRitmo();
+        limitaInputTextoMusical();
+    }
+
+    private void limitaInputRitmo(){
+        ritmoInput.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*"))
+                ritmoInput.setText(newValue.replaceAll("[^\\d]", ""));
+        });
+    }
+
+    private void limitaInputTextoMusical(){
+        textoMusicalInput.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("^\\d*"))
+                textoMusicalInput.setText(newValue.replaceAll("[\\d]", ""));
+        });
     }
 
     private void carregaDropdown(){
@@ -136,22 +151,26 @@ public class Controlador extends Application implements Initializable {
     }
 
     private Boolean inputCorreto(){
-        if(textoMusicalInput.getText().isEmpty())
-            exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
-        else if(ritmoInput.getText().isEmpty())
-            exibeMensagemErro(Erros.TITULO_RITMO_VAZIO, Erros.MENSAGEM_RITMO_VAZIO);
-        else if(instrumentosDropdown.getSelectionModel().isEmpty())
-            exibeMensagemErro(Erros.TITULO_INSTRUMENTO_VAZIO, Erros.MENSAGEM_INSTRUMENTO_VAZIO);
+        if(!textoMusicalCorreto())
+            Erros.exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
+        else if(!ritmoCorreto())
+            Erros.exibeMensagemErro(Erros.TITULO_RITMO_VAZIO, Erros.MENSAGEM_RITMO_VAZIO);
+        else if(!intrumentoCorreto())
+            Erros.exibeMensagemErro(Erros.TITULO_INSTRUMENTO_VAZIO, Erros.MENSAGEM_INSTRUMENTO_VAZIO);
         else return true;
         return false;
     }
 
-    private void exibeMensagemErro(String titulo, String mensagem) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Erro!");
-        alert.setHeaderText(titulo);
-        alert.setContentText(mensagem);
-        alert.showAndWait();
+    private Boolean textoMusicalCorreto(){
+        return !textoMusicalInput.getText().isEmpty();
+    }
+
+    private Boolean ritmoCorreto(){
+        return !ritmoInput.getText().isEmpty();
+    }
+
+    private Boolean intrumentoCorreto(){
+        return !instrumentosDropdown.getSelectionModel().isEmpty();
     }
 
 }

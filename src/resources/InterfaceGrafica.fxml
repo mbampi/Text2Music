@@ -20,13 +20,13 @@
                   <Font name="Calibri Light" size="28.0" />
                </font>
             </Label>
-            <Label layoutX="431.0" layoutY="200.0" text="Instrumento" />
+            <Label layoutX="431.0" layoutY="209.0" text="Instrumento" />
             <Label layoutX="14.0" layoutY="114.0" prefHeight="17.0" prefWidth="91.0" text="Texto Musical:" />
-            <TextField fx:id="ritmoInput" layoutX="429.0" layoutY="156.0" />
+            <TextField fx:id="ritmoInput" layoutX="429.0" layoutY="156.0" text="120" />
             <Label layoutX="430.0" layoutY="139.0" text="Ritmo (BPM)" />
             <Button layoutX="336.0" layoutY="110.0" mnemonicParsing="false" onAction="#carregaMusica" text="Carregar..." />
             <Button layoutX="453.0" layoutY="356.0" mnemonicParsing="false" onAction="#salvarMIDI" prefHeight="25.0" prefWidth="101.0" text="Salvar Musica" />
-            <ComboBox fx:id="instrumentosDropdown" layoutX="429.0" layoutY="217.0" prefWidth="150.0" />
+            <ComboBox fx:id="instrumentosDropdown" layoutX="428.0" layoutY="226.0" prefWidth="150.0" />
          </children>
       </Pane>
    </children>
