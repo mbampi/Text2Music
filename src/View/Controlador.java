@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -90,34 +91,38 @@ public class Controlador extends Application implements Initializable {
 
     @FXML
     void tocaMusica(ActionEvent event){
-        System.out.println("Tocar Pressed");
+        if(inputCorreto()) {
+            System.out.println("Tocar Pressed");
 
-        Musica musica = geraMusica();
-        Pattern padraoMusical = musica.getMusicPattern();
-        System.out.println(padraoMusical.toString());
+            Musica musica = geraMusica();
+            Pattern padraoMusical = musica.getMusicPattern();
+            System.out.println(padraoMusical.toString());
 
-        Player tocador = new Player();
-        tocador.play(padraoMusical);
+            Player tocador = new Player();
+            tocador.play(padraoMusical);
+        }
     }
 
     @FXML
     void salvarMIDI(ActionEvent event) {
         System.out.println("Salvar MIDI");
 
-        Musica musica = geraMusica();
-        Pattern padraoMusical = musica.getMusicPattern();
-        System.out.println(padraoMusical.toString());
+        if(inputCorreto()) {
+            Musica musica = geraMusica();
+            Pattern padraoMusical = musica.getMusicPattern();
+            System.out.println(padraoMusical.toString());
 
-        FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("MIDI files", "*.mid");
-        fileChooser.getExtensionFilters().add(extFilter);
-        File file = fileChooser.showSaveDialog(null);
-        System.out.println(file.toString());
+            FileChooser fileChooser = new FileChooser();
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("MIDI files", "*.mid");
+            fileChooser.getExtensionFilters().add(extFilter);
+            File file = fileChooser.showSaveDialog(null);
+            System.out.println(file.toString());
 
-        try {
-            MidiFileManager.savePatternToMidi(padraoMusical, file);
-        } catch (IOException ex) {
-            System.out.println("IO Exception");
+            try {
+                MidiFileManager.savePatternToMidi(padraoMusical, file);
+            } catch (IOException ex) {
+                System.out.println("IO Exception");
+            }
         }
     }
 
@@ -128,6 +133,25 @@ public class Controlador extends Application implements Initializable {
         int instrumento = Instrumentos.listaInstrumentos.indexOf(intrumentoSelecionado);
 
         return new Musica(textoMusical, instrumento, ritmo);
+    }
+
+    private Boolean inputCorreto(){
+        if(textoMusicalInput.getText().isEmpty())
+            exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
+        else if(ritmoInput.getText().isEmpty())
+            exibeMensagemErro(Erros.TITULO_RITMO_VAZIO, Erros.MENSAGEM_RITMO_VAZIO);
+        else if(instrumentosDropdown.getSelectionModel().isEmpty())
+            exibeMensagemErro(Erros.TITULO_INSTRUMENTO_VAZIO, Erros.MENSAGEM_INSTRUMENTO_VAZIO);
+        else return true;
+        return false;
+    }
+
+    private void exibeMensagemErro(String titulo, String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Erro!");
+        alert.setHeaderText(titulo);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 
 }
