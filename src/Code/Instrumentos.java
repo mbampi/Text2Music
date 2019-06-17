@@ -7,17 +7,17 @@ public class Instrumentos {
      private static final int MAX_INSTRUMENTO = 127;
      private static final int MIN_INSTRUMENTO = 0;
 
-     public static boolean isValidInstrument(int instrument){
+     static boolean isValidInstrument(int instrument){
          return (instrument >= MIN_INSTRUMENTO && instrument <= MAX_INSTRUMENTO);
      }
 
-     public static String getInstrumentoToken(int instrumento){
+     static String getInstrumentoToken(int instrumento){
          if(!isValidInstrument(instrumento))
              return "";
          return "I"+instrumento;
      }
 
-     public static int trocaInstrumento(int instrumentoAtual, int digito){
+     static int trocaInstrumento(int instrumentoAtual, int digito){
          if(!isValidInstrument(instrumentoAtual + digito))
              return instrumentoAtual;
          return instrumentoAtual+digito;

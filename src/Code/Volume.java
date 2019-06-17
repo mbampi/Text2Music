@@ -1,6 +1,6 @@
 package Code;
 
-public class Volume {
+class Volume {
 
     private static final int DOIS = 2;
     private static final float DEZ_PORCENTO = 1.1f;
@@ -9,19 +9,19 @@ public class Volume {
     private static final int MIN_VOLUME = 0;
     static final int VOLUME_DEFAULT = 10000;
 
-    public static int aumentaDezPorCento(int volumeAtual) {
+    static int aumentaDezPorCento(int volumeAtual) {
         if(!volumeIsValid((int)(volumeAtual * DEZ_PORCENTO)))
             return volumeAtual;
         return (int)(volumeAtual * DEZ_PORCENTO);
     }
 
-    public static int dobra(int volumeAtual){
-        if (!volumeIsValid((int) (volumeAtual * DOIS)))
+    static int dobra(int volumeAtual){
+        if (!volumeIsValid(volumeAtual * DOIS))
             return volumeAtual;
         return (volumeAtual * DOIS);
     }
 
-    public static String getVolumeToken(int volume){
+    static String getVolumeToken(int volume){
         if(!volumeIsValid(volume))
             return "";
         return "X[Volume]="+volume;

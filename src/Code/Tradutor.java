@@ -2,14 +2,14 @@ package Code;
 
 import org.jfugue.theory.Note;
 
-public class Tradutor {
+class Tradutor {
 
     private Comando comando = new Comando();
     private Nota nota = new Nota();
     private int instrumentoAtual;
     private int volumeAtual;
 
-    public String traduzMusica(Musica musica) {
+    String traduzMusica(Musica musica) {
         StringBuilder musicaTraduzida = new StringBuilder(inicializaMusica(musica));
 
         for (int i=0; i<musica.getTextoMusical().length(); i++)
@@ -56,7 +56,7 @@ public class Tradutor {
         }
 
         else if(comando.isDigito()) {
-            this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, (int)comando.getComando());
+            this.instrumentoAtual = Instrumentos.trocaInstrumento(this.instrumentoAtual, comando.getComandoDigito());
             return Instrumentos.getInstrumentoToken(this.instrumentoAtual);
         }
 
@@ -81,9 +81,9 @@ public class Tradutor {
 
         else{
             if(comando.ultimoComandoIsNota())
-                return nota.repeteNota();
+                return nota.getNotaToken(comando.getUltimoComando());
             return String.valueOf(Note.REST);
         }
     }
-    
+
 }

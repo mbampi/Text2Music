@@ -1,20 +1,29 @@
 package Code;
 
-public class Comando {
+class Comando {
 
     private char comando;
     private char ultimoComando;
 
-    Comando() { }
+    Comando() {
+        comando = Character.UNASSIGNED;
+        ultimoComando = Character.UNASSIGNED;
+    }
 
     char getComando() {
         return comando;
+    }
+
+    int getComandoDigito() {
+        return comando - '0';
     }
 
     void setComando(char comando) {
         this.ultimoComando = this.comando;
         this.comando = comando;
     }
+
+    char getUltimoComando(){ return ultimoComando; }
 
     boolean isDigito(){
         return Character.isDigit(this.comando);
@@ -42,7 +51,7 @@ public class Comando {
         return (c == 'O'  || c == 'U' || c == 'I');
     }
 
-    public boolean isConsoante() {
+    boolean isConsoante() {
         return !isVogal();
     }
 

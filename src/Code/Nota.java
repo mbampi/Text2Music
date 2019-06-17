@@ -7,15 +7,9 @@ class Nota {
     private static final int OITAVA_DEFAULT = 5;
 
     private int oitava;
-    private char ultimaNota;
 
     String getNotaToken(char nota){
-        this.ultimaNota = nota;
         return nota + "" + oitava;
-    }
-
-    String repeteNota(){
-        return ultimaNota + "" + oitava;
     }
 
     void aumentaOitava() {

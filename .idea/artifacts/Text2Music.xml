@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Text2Music">
+    <output-path>$PROJECT_DIR$/out/artifacts/Text2Music</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="View.Controlador" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Text2Music.jar">
+        <element id="module-output" name="Text2Music" />
+        <element id="file-copy" path="$USER_HOME$/Downloads/jfugue-5.0.9.jar" />
+        <element id="library" level="project" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>

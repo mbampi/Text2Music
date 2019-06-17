@@ -5,7 +5,7 @@ public class Ritmo {
     public static final int MAX_BPM = 220;
     public static final int MIN_BPM = 40;
 
-    public static String getRitmoToken(int bpm){
+    static String getRitmoToken(int bpm){
         if(ritmoValido(bpm))
             return "T" + bpm;
         return "";

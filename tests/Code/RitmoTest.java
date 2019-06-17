@@ -1,3 +1,5 @@
+package Code;
+
 import Code.Ritmo;
 import org.junit.Assert;
 import org.junit.Test;
