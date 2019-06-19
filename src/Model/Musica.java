@@ -6,12 +6,12 @@ public class Musica {
 
     private String textoMusical;
     private int instrumento;
-    private int bpm;
+    private int ritmo;
 
-    public Musica(String textoMusical, int instrumento, int bpm) {
+    public Musica(String textoMusical, int instrumento, int ritmo) {
         this.textoMusical = textoMusical;
         this.instrumento = instrumento;
-        this.bpm = bpm;
+        this.ritmo = ritmo;
     }
 
     public Pattern getMusicPattern(){
@@ -28,7 +28,7 @@ public class Musica {
         return instrumento;
     }
 
-    int getBpm() {
-        return bpm;
+    int getRitmo() {
+        return ritmo;
     }
 }

@@ -30,7 +30,7 @@ class Tradutor {
         this.instrumentoAtual = musica.getInstrumento();
         inicioMusica += Instrumentos.getInstrumentoToken(this.instrumentoAtual) + " ";
 
-        inicioMusica += Ritmo.getRitmoToken(musica.getBpm()) + " ";
+        inicioMusica += Ritmo.getRitmoToken(musica.getRitmo()) + " ";
 
         return inicioMusica;
     }
