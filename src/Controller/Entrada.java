@@ -42,7 +42,7 @@ public class Entrada extends Application implements Initializable {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("InterfaceGrafica.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../View/InterfaceGrafica.fxml"));
         primaryStage.setTitle("Gerador de Musica");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
@@ -109,18 +109,15 @@ public class Entrada extends Application implements Initializable {
             System.out.println(padraoMusical.toString());
 
             Player tocador = new Player();
-            exibeAvisoReproducao();
-            tocador.play(padraoMusical);
-            // PARA AVISO
-        }
-    }
 
-    private void exibeAvisoReproducao() {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Reproduzindo!");
+            alert.setTitle("Reproduzindo Musica!");
             alert.setHeaderText("Reproduzindo");
             alert.setContentText("Reproduzindo musica!");
-            alert.showAndWait();
+            alert.show();
+            tocador.play(padraoMusical);
+            alert.close();
+        }
     }
 
     @FXML
