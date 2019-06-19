@@ -3,7 +3,7 @@ package Controller;
 import Model.Instrumentos;
 import Model.Musica;
 import Model.Ritmo;
-import View.Erros;
+import View.Avisos;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,10 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.jfugue.midi.MidiFileManager;
@@ -27,15 +24,14 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Entrada extends Application implements Initializable {
+public class Principal extends Application implements Initializable {
 
     @FXML
     private ComboBox<String> instrumentosDropdown;
     @FXML
-    private TextArea textoMusicalInput;
+    private TextArea textoMusicalEntrada;
     @FXML
-    private TextField ritmoInput;
-
+    private TextField ritmoEntrada;
 
     public static void main(String[] args) {
         launch(args);
@@ -54,9 +50,9 @@ public class Entrada extends Application implements Initializable {
     }
 
     private void limitaEntradaRitmo(){
-        ritmoInput.textProperty().addListener((observable, oldValue, newValue) -> {
+        ritmoEntrada.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*"))
-                ritmoInput.setText(newValue.replaceAll("[^\\d]", ""));
+                ritmoEntrada.setText(newValue.replaceAll("[^\\d]", ""));
         });
     }
 
@@ -65,7 +61,6 @@ public class Entrada extends Application implements Initializable {
         instrumentosDropdown.setItems(obsInstrumentos);
     }
 
-
     @FXML
     void carregaMusica(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -73,10 +68,10 @@ public class Entrada extends Application implements Initializable {
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
         File file = fileChooser.showOpenDialog(null);
         if(file != null)
-            textoMusicalInput.setText(textoMusicalInput.getText() + readFile(file));
+            textoMusicalEntrada.setText(textoMusicalEntrada.getText() + leArquivo(file));
     }
 
-    private String readFile(File file){
+    private String leArquivo(File file){
         StringBuilder stringBuffer = new StringBuilder();
         BufferedReader bufferedReader = null;
         try {
@@ -111,9 +106,7 @@ public class Entrada extends Application implements Initializable {
             Player tocador = new Player();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Reproduzindo Musica!");
-            alert.setHeaderText("Reproduzindo");
-            alert.setContentText("Reproduzindo musica!");
+            alert.setTitle(Avisos.TITULO_REPRODUZINDO_MUSICA);
             alert.show();
             tocador.play(padraoMusical);
             alert.close();
@@ -121,7 +114,7 @@ public class Entrada extends Application implements Initializable {
     }
 
     @FXML
-    void salvarButtonPressed(ActionEvent event) {
+    void botaoSalvarPressionado(ActionEvent event) {
         System.out.println("Salvar MIDI");
         if (inputCorreto()) {
             Musica musica = geraMusica();
@@ -143,8 +136,8 @@ public class Entrada extends Application implements Initializable {
     }
 
     private Musica geraMusica(){
-        String textoMusical = textoMusicalInput.getText();
-        int ritmo = Integer.valueOf(ritmoInput.getText());
+        String textoMusical = textoMusicalEntrada.getText();
+        int ritmo = Integer.valueOf(ritmoEntrada.getText());
         String intrumentoSelecionado = instrumentosDropdown.getValue();
         int instrumento = Instrumentos.listaInstrumentos.indexOf(intrumentoSelecionado);
 
@@ -153,21 +146,21 @@ public class Entrada extends Application implements Initializable {
 
     private Boolean inputCorreto(){
         if(!textoMusicalCorreto())
-            Erros.exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
+            Avisos.exibeMensagemErro(Avisos.TITULO_TEXTO_MUSICAL_VAZIO, Avisos.MENSAGEM_TEXTO_MUSICAL_VAZIO);
         else if(!ritmoCorreto())
-            Erros.exibeMensagemErro(Erros.TITULO_RITMO_VAZIO, Erros.MENSAGEM_RITMO_VAZIO);
+            Avisos.exibeMensagemErro(Avisos.TITULO_RITMO_VAZIO, Avisos.MENSAGEM_RITMO_VAZIO);
         else if(!intrumentoCorreto())
-            Erros.exibeMensagemErro(Erros.TITULO_INSTRUMENTO_VAZIO, Erros.MENSAGEM_INSTRUMENTO_VAZIO);
+            Avisos.exibeMensagemErro(Avisos.TITULO_INSTRUMENTO_VAZIO, Avisos.MENSAGEM_INSTRUMENTO_VAZIO);
         else return true;
         return false;
     }
 
     private Boolean textoMusicalCorreto(){
-        return !textoMusicalInput.getText().isEmpty();
+        return !textoMusicalEntrada.getText().isEmpty();
     }
 
     private Boolean ritmoCorreto(){
-        return !ritmoInput.getText().isEmpty() && Ritmo.ritmoValido(Integer.valueOf(ritmoInput.getText()));
+        return !ritmoEntrada.getText().isEmpty() && Ritmo.ritmoValido(Integer.valueOf(ritmoEntrada.getText()));
     }
 
     private Boolean intrumentoCorreto(){

@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Entrada">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Principal">
    <children>
       <Pane layoutY="-14.0" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Button layoutX="429.0" layoutY="292.0" mnemonicParsing="false" onAction="#tocaMusica" prefHeight="45.0" prefWidth="150.0" text="Tocar" />
-            <TextArea fx:id="textoMusicalInput" layoutX="15.0" layoutY="139.0" prefHeight="242.0" prefWidth="391.0" />
+            <TextArea fx:id="textoMusicalEntrada" layoutX="15.0" layoutY="139.0" prefHeight="242.0" prefWidth="391.0" />
             <Label layoutX="135.0" layoutY="48.0" prefHeight="32.0" prefWidth="217.0" text="Gerador de Música" textOverrun="CLIP">
                <font>
                   <Font name="Calibri Light" size="28.0" />
@@ -22,10 +22,10 @@
             </Label>
             <Label layoutX="431.0" layoutY="209.0" text="Instrumento" />
             <Label layoutX="14.0" layoutY="114.0" prefHeight="17.0" prefWidth="91.0" text="Texto Musical:" />
-            <TextField fx:id="ritmoInput" layoutX="429.0" layoutY="156.0" text="120" />
+            <TextField fx:id="ritmoEntrada" layoutX="429.0" layoutY="156.0" text="120" />
             <Label layoutX="430.0" layoutY="139.0" text="Ritmo (BPM)" />
             <Button layoutX="336.0" layoutY="110.0" mnemonicParsing="false" onAction="#carregaMusica" text="Carregar..." />
-            <Button layoutX="453.0" layoutY="356.0" mnemonicParsing="false" onAction="#salvarButtonPressed" prefHeight="25.0" prefWidth="101.0" text="Salvar Musica" />
+            <Button layoutX="453.0" layoutY="356.0" mnemonicParsing="false" onAction="#botaoSalvarPressionado" prefHeight="25.0" prefWidth="101.0" text="Salvar Musica" />
             <ComboBox fx:id="instrumentosDropdown" layoutX="428.0" layoutY="226.0" prefWidth="150.0" />
          </children>
       </Pane>

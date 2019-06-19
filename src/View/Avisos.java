@@ -3,7 +3,9 @@ package View;
 import Model.Ritmo;
 import javafx.scene.control.Alert;
 
-public class Erros {
+public class Avisos {
+    public static final String TITULO_REPRODUZINDO_MUSICA = "Reproduzindo Musica!";
+
     public final static String TITULO_TEXTO_MUSICAL_VAZIO = "Texto Musical Vazio";
     public final static String MENSAGEM_TEXTO_MUSICAL_VAZIO = "Carregue/escreva o texto musical para poder continuar";
 
