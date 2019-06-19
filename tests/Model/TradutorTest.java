@@ -1,7 +1,5 @@
-package Code;
+package Model;
 
-import Code.Musica;
-import Code.Tradutor;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,10 +1,10 @@
-package Code;
+package Model;
 
 import org.jfugue.theory.Note;
 
 class Nota {
 
-    private static final int OITAVA_DEFAULT = 5;
+    private static final int OITAVA_DEFAULT = 8;
 
     private int oitava;
 

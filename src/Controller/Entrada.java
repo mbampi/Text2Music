@@ -1,8 +1,9 @@
-package View;
+package Controller;
 
-import Code.Instrumentos;
-import Code.Musica;
-import Code.Ritmo;
+import Model.Instrumentos;
+import Model.Musica;
+import Model.Ritmo;
+import View.Erros;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -25,7 +27,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controlador extends Application implements Initializable {
+public class Entrada extends Application implements Initializable {
 
     @FXML
     private ComboBox<String> instrumentosDropdown;
@@ -40,8 +42,8 @@ public class Controlador extends Application implements Initializable {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/InterfaceGrafica.fxml"));
-        primaryStage.setTitle("Text2Music");
+        Parent root = FXMLLoader.load(getClass().getResource("InterfaceGrafica.fxml"));
+        primaryStage.setTitle("Gerador de Musica");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
@@ -107,15 +109,24 @@ public class Controlador extends Application implements Initializable {
             System.out.println(padraoMusical.toString());
 
             Player tocador = new Player();
+            exibeAvisoReproducao();
             tocador.play(padraoMusical);
+            // PARA AVISO
         }
     }
 
-    @FXML
-    void salvaMIDI(ActionEvent event) {
-        System.out.println("Salvar MIDI");
+    private void exibeAvisoReproducao() {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Reproduzindo!");
+            alert.setHeaderText("Reproduzindo");
+            alert.setContentText("Reproduzindo musica!");
+            alert.showAndWait();
+    }
 
-        if(inputCorreto()) {
+    @FXML
+    void salvarButtonPressed(ActionEvent event) {
+        System.out.println("Salvar MIDI");
+        if (inputCorreto()) {
             Musica musica = geraMusica();
             Pattern padraoMusical = musica.getMusicPattern();
             System.out.println(padraoMusical.toString());
@@ -143,7 +154,6 @@ public class Controlador extends Application implements Initializable {
         return new Musica(textoMusical, instrumento, ritmo);
     }
 
-
     private Boolean inputCorreto(){
         if(!textoMusicalCorreto())
             Erros.exibeMensagemErro(Erros.TITULO_TEXTO_MUSICAL_VAZIO, Erros.MENSAGEM_TEXTO_MUSICAL_VAZIO);
@@ -168,4 +178,3 @@ public class Controlador extends Application implements Initializable {
     }
 
 }
-

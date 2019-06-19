@@ -1,4 +1,4 @@
-package Code;
+package Model;
 
 import org.jfugue.theory.Note;
 

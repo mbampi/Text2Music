@@ -1,6 +1,5 @@
-package Code;
+package Model;
 
-import Code.Volume;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
