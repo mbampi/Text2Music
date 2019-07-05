@@ -4,9 +4,13 @@ import org.jfugue.theory.Note;
 
 class Nota {
 
-    private static final int OITAVA_DEFAULT = 8;
+    private static final int OITAVA_DEFAULT = 5;
 
     private int oitava;
+
+    Nota(){
+        this.oitava = OITAVA_DEFAULT;
+    }
 
     String getNotaToken(char nota){
         return nota + "" + oitava;

@@ -28,14 +28,17 @@ public class Principal extends Application implements Initializable {
 
     @FXML
     private ComboBox<String> instrumentosDropdown;
+
     @FXML
     private TextArea textoMusicalEntrada;
+
     @FXML
     private TextField ritmoEntrada;
 
     public static void main(String[] args) {
         launch(args);
     }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../View/InterfaceGrafica.fxml"));
@@ -43,6 +46,7 @@ public class Principal extends Application implements Initializable {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         carregaDropdown();
@@ -149,7 +153,7 @@ public class Principal extends Application implements Initializable {
             Avisos.exibeMensagemErro(Avisos.TITULO_TEXTO_MUSICAL_VAZIO, Avisos.MENSAGEM_TEXTO_MUSICAL_VAZIO);
         else if(!ritmoCorreto())
             Avisos.exibeMensagemErro(Avisos.TITULO_RITMO_VAZIO, Avisos.MENSAGEM_RITMO_VAZIO);
-        else if(!intrumentoCorreto())
+        else if(!instrumentoCorreto())
             Avisos.exibeMensagemErro(Avisos.TITULO_INSTRUMENTO_VAZIO, Avisos.MENSAGEM_INSTRUMENTO_VAZIO);
         else return true;
         return false;
@@ -163,7 +167,7 @@ public class Principal extends Application implements Initializable {
         return !ritmoEntrada.getText().isEmpty() && Ritmo.ritmoValido(Integer.valueOf(ritmoEntrada.getText()));
     }
 
-    private Boolean intrumentoCorreto(){
+    private Boolean instrumentoCorreto(){
         return !instrumentosDropdown.getSelectionModel().isEmpty();
     }
 
