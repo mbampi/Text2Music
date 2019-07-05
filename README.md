@@ -4,8 +4,8 @@ Text to music converter using JFugue API
 
 
 - Main Screen:
-![Alt text](./img/TelaPrincipal.png?raw=true "Mapeamento")
+<img src="./img/TelaPrincipal.PNG" alt="Main Screen"/>
 
 - Command Mapping:
-![Alt text](./img/mapeamento.png?raw=true "Mapeamento")
+<img src="./img/mapeamento.png" alt="Mapping"/>
 
